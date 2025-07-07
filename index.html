@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse Pro - La montre connectée ultime | FitTech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ... الأنماط الحالية تبقى كما هي ... */
+        
+        /* Contact Form Styles */
+        .contact-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-container::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 50%;
+        }
+        
+        .contact-title {
+            text-align: center;
+            font-size: 32px;
+            color: var(--dark);
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .contact-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        .contact-subtitle {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+        
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .payment-option {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        
+        .payment-option.selected {
+            border-color: var(--primary);
+            background: rgba(37, 99, 235, 0.05);
+        }
+        
+        .payment-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .payment-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+        
+        .payment-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .payment-desc {
+            color: var(--gray);
+            font-size: 14px;
+            padding-left: 55px;
+        }
+        
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            grid-column: span 2;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+        }
+        
+        .submit-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(37, 99, 235, 0.4);
+        }
+        
+        .payment-note {
+            text-align: center;
+            color: var(--gray);
+            margin-top: 20px;
+            font-size: 14px;
+            grid-column: span 2;
+        }
+        
+        .payment-note i {
+            color: var(--accent);
+            margin-right: 5px;
+        }
+        
+        /* Thank You Page Styles */
+        .thank-you-section {
+            padding: 100px 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+        }
+        
+        .thank-you-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+        
+        .thank-you-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(to right, #10b981, #34d399);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: white;
+            font-size: 50px;
+        }
+        
+        .thank-you-title {
+            font-size: 42px;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+        
+        .thank-you-text {
+            font-size: 20px;
+            color: var(--gray);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .order-details {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: left;
+        }
+        
+        .order-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--dark);
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .order-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .info-group p {
+            margin-bottom: 8px;
+        }
+        
+        .info-label {
+            color: var(--gray);
+            font-weight: 500;
+        }
+        
+        .info-value {
+            color: var(--dark);
+            font-weight: 600;
+        }
+        
+        .back-to-home {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+        
+        .back-to-home:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .contact-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+            
+            .submit-btn {
+                grid-column: span 1;
+            }
+            
+            .payment-note {
+                grid-column: span 1;
+            }
+            
+            .contact-container {
+                padding: 30px;
+            }
+            
+            .thank-you-container {
+                padding: 30px;
+            }
+            
+            .order-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>FitTech</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Boutique</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Section -->
+    <section class="product-section">
+        <div class="container product-container">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F0Y2h8fHx8fHwxNjg5NjI1OTQw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200" alt="Montre Connectée Pulse Pro" id="mainImage">
+                </div>
+                <div class="thumbnails">
+                    <div class="thumbnail active" onclick="changeImage('https://images.unsplash.com/photo-1523275335684-37898b6baf30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F0Y2h8fHx8fHwxNjg5NjI1OTQw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200')">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F0Y2h8fHx8fHwxNjg5NjI1OTQw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=200" alt="Pulse Pro - Vue avant">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage('https://images.unsplash.com/photo-1546868871-7041f2a55e12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F0Y2h8fHx8fHwxNjg5NjI2MDg1&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200')">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F0Y2h8fHx8fHwxNjg5NjI2MDg1&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=200" alt="Pulse Pro - Vue de côté">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage('https://images.unsplash.com/photo-1585123334904-845d60e97b29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F0Y2h8fHx8fHwxNjg5NjI2MTE5&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200')">
+                        <img src="https://images.unsplash.com/photo-1585123334904-845d60e97b29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F0Y2h8fHx8fHwxNjg5NjI2MTE5&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=200" alt="Pulse Pro - Écran">
+                    </div>
+                    <div class="thumbnail" onclick="changeImage('https://images.unsplash.com/photo-1579586337278-3befd40fd17a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F0Y2h8fHx8fHwxNjg5NjI2MTQ2&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200')">
+                        <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F0Y2h8fHx8fHwxNjg5NjI2MTQ2&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=200" alt="Pulse Pro - Au poignet">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <span class="product-badge">Nouveauté</span>
+                <h1 class="product-title">Pulse Pro : Le partenaire ultime pour votre santé et votre performance</h1>
+                <p class="product-subtitle">La montre connectée qui transforme vos données de santé en résultats concrets</p>
+                
+                <div class="product-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="reviews">(428 avis clients)</span>
+                </div>
+                
+                <div class="price-container">
+                    <span class="current-price">249,99 €</span>
+                    <span class="original-price">299,99 €</span>
+                    <span class="discount">-17%</span>
+                </div>
+                
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Surveillance cardiaque avancée</h3>
+                            <p>Suivi continu de votre fréquence cardiaque et détection des anomalies</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shoe-prints"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>GPS intégré de précision</h3>
+                            <p>Mesurez vos parcours avec une précision militaire</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-swimmer"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Étanche jusqu'à 100m</h3>
+                            <p>Idéale pour la natation et toutes vos activités aquatiques</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin: 30px 0; text-align: center;">
+                    <a href="#" class="cta-button" style="width: 100%; display: block;">
+                        <i class="fas fa-shopping-cart"></i> Ajouter au panier - 249,99 €
+                    </a>
+                    <p style="margin-top: 15px; color: var(--gray); font-size: 14px;">
+                        <i class="fas fa-shield-alt"></i> Garantie 2 ans • Livraison gratuite • Retours sous 30 jours
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Caractéristiques exceptionnelles</h2>
+            
+            <div class="features-container">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <h3 class="feature-title">Autonomie longue durée</h3>
+                    <p class="feature-description">Jusqu'à 14 jours d'autonomie avec une seule charge. Oubliez votre chargeur pendant vos voyages.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3 class="feature-title">Analyse du sommeil</h3>
+                    <p class="feature-description">Comprenez vos cycles de sommeil et recevez des conseils pour améliorer votre récupération.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3 class="feature-title">150+ modes sport</h3>
+                    <p class="feature-description">De la course à pied au yoga, Pulse Pro s'adapte à toutes vos activités.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container benefits-container">
+            <h2 class="section-title">Pourquoi choisir Pulse Pro ?</h2>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="benefit-content">
+                    <h3>Atteignez vos objectifs plus rapidement</h3>
+                    <p>Notre technologie exclusive d'entraînement adaptatif analyse vos performances et crée des plans personnalisés pour maximiser vos résultats.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="benefit-content">
+                    <h3>Prenez soin de votre santé</h3>
+                    <p>La surveillance ECG intégrée et la détection de SpO2 vous alertent sur votre état de santé général, pour une prévention optimale.</p>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="benefit-content">
+                    <h3>Restez connecté sans distraction</h3>
+                    <p>Recevez vos notifications importantes directement sur votre poignet et laissez votre téléphone dans votre poche pour rester concentré sur l'essentiel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-container">
+                <h2 class="cta-title">Prêt à transformer votre quotidien ?</h2>
+                <p class="cta-text">Rejoignez les milliers d'utilisateurs satisfaits et faites de Pulse Pro votre compagnon santé et fitness.</p>
+                <a href="#" class="cta-button">Commander maintenant - Économisez 50€</a>
+                <p style="margin-top: 20px; opacity: 0.8;">Livraison express gratuite • Garantie satisfait ou remboursé 30 jours</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section for Product Page -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <h2 class="contact-title">Commander avec paiement à la livraison</h2>
+                <p class="contact-subtitle">Remplissez ce formulaire pour commander votre Pulse Pro. Vous ne payez qu'à la réception du produit!</p>
+                
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="fullName">Nom complet</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Votre nom complet">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Adresse e-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Numéro de téléphone</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="06 12 34 56 78">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Adresse de livraison</label>
+                        <textarea id="address" name="address" required placeholder="Votre adresse complète avec code postal"></textarea>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label>Méthode de paiement</label>
+                        
+                        <div class="payment-option selected" onclick="selectPayment(this)">
+                            <div class="payment-header">
+                                <div class="payment-icon">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+                                <div class="payment-title">Paiement à la livraison</div>
+                            </div>
+                            <p class="payment-desc">Payez en espèces ou par carte bancaire lorsque vous recevez votre produit</p>
+                        </div>
+                        
+                        <div class="payment-option" onclick="selectPayment(this)">
+                            <div class="payment-header">
+                                <div class="payment-icon">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div class="payment-title">Paiement en ligne</div>
+                            </div>
+                            <p class="payment-desc">Payez maintenant par carte bancaire ou portefeuille électronique</p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="quantity">Quantité</label>
+                        <select id="quantity" name="quantity">
+                            <option value="1">1 unité - 249,99 €</option>
+                            <option value="2">2 unités - 499,98 €</option>
+                            <option value="3">3 unités - 749,97 €</option>
+                            <option value="4">4 unités - 999,96 €</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="message">Message supplémentaire (optionnel)</label>
+                        <textarea id="message" name="message" placeholder="Des instructions spéciales pour la livraison?"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Confirmer la commande</button>
+                    
+                    <p class="payment-note">
+                        <i class="fas fa-lock"></i> Vos informations sont sécurisées. Aucun paiement ne sera effectué avant la réception du produit.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>FitTech</h3>
+                    <p style="color: #cbd5e1; margin-bottom: 20px;">Des technologies innovantes pour votre santé et votre bien-être.</p>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="#" style="color: white; font-size: 20px;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: white; font-size: 20px;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: white; font-size: 20px;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: white; font-size: 20px;"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Nos produits</a></li>
+                        <li><a href="#">Technologies</a></li>
+                        <li><a href="#">Blog santé</a></li>
+                        <li><a href="#">Nous contacter</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Livraison</a></li>
+                        <li><a href="#">Retours</a></li>
+                        <li><a href="#">Garantie</a></li>
+                        <li><a href="#">Centre d'assistance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p style="color: #cbd5e1; margin-bottom: 15px;">Inscrivez-vous pour recevoir nos offres exclusives.</p>
+                    <form style="display: flex;">
+                        <input type="email" placeholder="Votre email" style="padding: 10px; border: none; border-radius: 4px 0 0 4px; flex: 1;">
+                        <button type="submit" style="background: var(--accent); color: white; border: none; padding: 0 15px; border-radius: 0 4px 4px 0; cursor: pointer;"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 FitTech. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Thank You Page -->
+    <section id="thankYouPage" class="thank-you-section" style="display: none;">
+        <div class="container">
+            <div class="thank-you-container">
+                <div class="thank-you-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h2 class="thank-you-title">Merci pour votre commande!</h2>
+                <p class="thank-you-text">
+                    Votre commande pour la montre Pulse Pro a été confirmée avec succès. 
+                    Notre équipe vous contactera dans les 24 heures pour confirmer les détails de livraison.
+                </p>
+                
+                <div class="order-details">
+                    <h3 class="order-title">Détails de votre commande</h3>
+                    <div class="order-info">
+                        <div class="info-group">
+                            <p><span class="info-label">Numéro de commande:</span> <span class="info-value">FT-2023-7584</span></p>
+                            <p><span class="info-label">Produit:</span> <span class="info-value">Pulse Pro Montre Connectée</span></p>
+                            <p><span class="info-label">Quantité:</span> <span class="info-value">1</span></p>
+                        </div>
+                        <div class="info-group">
+                            <p><span class="info-label">Méthode de paiement:</span> <span class="info-value">Paiement à la livraison</span></p>
+                            <p><span class="info-label">Prix total:</span> <span class="info-value">249,99 €</span></p>
+                            <p><span class="info-label">Livraison estimée:</span> <span class="info-value">2-3 jours ouvrables</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="thank-you-text">
+                    Un e-mail de confirmation a été envoyé à <strong>client@email.com</strong>. 
+                    Vous pouvez suivre votre commande dans votre espace client.
+                </p>
+                
+                <!-- Contact Form for Thank You Page -->
+                <div style="margin-top: 40px; text-align: left;">
+                    <h3 style="text-align: center; margin-bottom: 20px;">Besoin d'aide? Contactez-nous</h3>
+                    <form class="contact-form" style="background: #f8fafc; padding: 20px; border-radius: 12px;">
+                        <div class="form-group">
+                            <label for="thankYouName">Votre nom</label>
+                            <input type="text" id="thankYouName" placeholder="Votre nom">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="thankYouEmail">Votre e-mail</label>
+                            <input type="email" id="thankYouEmail" placeholder="votre@email.com">
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="thankYouMessage">Votre message</label>
+                            <textarea id="thankYouMessage" placeholder="Comment pouvons-nous vous aider?" rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Envoyer le message</button>
+                    </form>
+                </div>
+                
+                <a href="#" class="back-to-home">Retour à l'accueil</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+            
+            // Update active thumbnail
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            
+            event.currentTarget.classList.add('active');
+        }
+        
+        function selectPayment(element) {
+            // Remove selected class from all payment options
+            document.querySelectorAll('.payment-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked payment option
+            element.classList.add('selected');
+        }
+        
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show thank you page
+            document.getElementById('thankYouPage').style.display = 'block';
+            
+            // Scroll to thank you page
+            document.getElementById('thankYouPage').scrollIntoView({ behavior: 'smooth' });
+            
+            // Hide other sections
+            document.querySelector('header').style.display = 'none';
+            document.querySelector('.product-section').style.display = 'none';
+            document.querySelector('.features-section').style.display = 'none';
+            document.querySelector('.benefits-section').style.display = 'none';
+            document.querySelector('.cta-section').style.display = 'none';
+            document.querySelector('.contact-section').style.display = 'none';
+            document.querySelector('footer').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
