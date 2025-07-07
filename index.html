@@ -6,45 +6,274 @@
     <title>Pulse Pro - La montre connectée ultime | FitTech</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* ... الأنماط الحالية تبقى كما هي ... */
-        
-        /* Contact Form Styles */
-        .contact-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        :root {
+            --primary: #2563eb;
+            --secondary: #0ea5e9;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --accent: #f97316;
+            --gray: #94a3b8;
+            --success: #10b981;
+            --error: #ef4444;
         }
         
-        .contact-container {
-            max-width: 800px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f1f5f9;
+            color: var(--dark);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-            padding: 50px;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-actions a {
+            margin-left: 15px;
+            color: var(--dark);
+            text-decoration: none;
             position: relative;
-            overflow: hidden;
         }
         
-        .contact-container::before {
-            content: '';
+        .cart-count {
             position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 200px;
-            height: 200px;
-            background: rgba(37, 99, 235, 0.1);
+            top: -8px;
+            right: -8px;
+            background: var(--accent);
+            color: white;
+            font-size: 10px;
+            width: 18px;
+            height: 18px;
             border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
-        .contact-title {
+        /* Product Section */
+        .product-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+        }
+        
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .product-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Product Gallery */
+        .product-gallery {
+            position: relative;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            overflow: hidden;
+            padding: 20px;
+        }
+        
+        .main-image {
+            text-align: center;
+            margin-bottom: 20px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .main-image img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+        
+        .thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .thumbnail {
+            width: 70px;
+            height: 70px;
+            border: 2px solid transparent;
+            border-radius: 6px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .thumbnail:hover, .thumbnail.active {
+            border-color: var(--primary);
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Product Info */
+        .product-info {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .product-badge {
+            background: linear-gradient(to right, var(--accent), #fdba74);
+            color: white;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .product-title {
+            font-size: 32px;
+            color: var(--dark);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .product-subtitle {
+            color: var(--gray);
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        
+        .product-rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .stars {
+            color: #f59e0b;
+            margin-right: 10px;
+        }
+        
+        .reviews {
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        .price-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            gap: 15px;
+        }
+        
+        .current-price {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .original-price {
+            font-size: 20px;
+            text-decoration: line-through;
+            color: var(--gray);
+        }
+        
+        .discount {
+            background-color: #fee2e2;
+            color: #ef4444;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
             text-align: center;
             font-size: 32px;
             color: var(--dark);
-            margin-bottom: 30px;
+            margin-bottom: 50px;
             position: relative;
         }
         
-        .contact-title::after {
+        .section-title::after {
             content: '';
             display: block;
             width: 80px;
@@ -54,268 +283,504 @@
             border-radius: 2px;
         }
         
-        .contact-subtitle {
-            text-align: center;
-            color: var(--gray);
-            margin-bottom: 40px;
-            font-size: 18px;
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
         
-        .contact-form {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 28px;
+        }
+        
+        .feature-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .feature-description {
+            color: var(--gray);
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        
+        .benefits-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .benefit-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .benefit-icon {
+            min-width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            margin-right: 20px;
+        }
+        
+        .benefit-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .benefit-content p {
+            color: var(--gray);
+        }
+        
+        /* Order Form Section */
+        .order-section {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .order-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .order-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 25px 30px;
+            color: white;
+        }
+        
+        .order-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .order-subtitle {
+            opacity: 0.9;
+        }
+        
+        .order-body {
+            padding: 30px;
         }
         
         .form-group {
             margin-bottom: 20px;
         }
         
-        .form-group.full-width {
-            grid-column: span 2;
-        }
-        
         .form-group label {
             display: block;
             margin-bottom: 8px;
             font-weight: 500;
-            color: var(--dark);
         }
         
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
+        .form-group input, .form-group textarea {
             width: 100%;
-            padding: 14px;
-            border: 1px solid #cbd5e1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
             border-radius: 8px;
             font-size: 16px;
-            transition: all 0.3s;
+            transition: border-color 0.3s;
         }
         
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
+        .form-group input:focus, .form-group textarea:focus {
             border-color: var(--primary);
             outline: none;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
         }
         
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
         
-        .payment-option {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .payment-methods {
+            margin: 25px 0;
             padding: 20px;
-            margin-bottom: 20px;
-            transition: all 0.3s;
-        }
-        
-        .payment-option.selected {
-            border-color: var(--primary);
-            background: rgba(37, 99, 235, 0.05);
-        }
-        
-        .payment-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-        
-        .payment-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            margin-right: 15px;
-            font-size: 18px;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
         }
         
         .payment-title {
             font-size: 18px;
+            margin-bottom: 15px;
             font-weight: 600;
-            color: var(--dark);
         }
         
-        .payment-desc {
-            color: var(--gray);
-            font-size: 14px;
-            padding-left: 55px;
+        .payment-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .payment-option {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .payment-option:hover {
+            border-color: var(--primary);
+        }
+        
+        .payment-option.active {
+            border-color: var(--primary);
+            background-color: rgba(37, 99, 235, 0.05);
+        }
+        
+        .payment-option i {
+            margin-right: 10px;
+            font-size: 24px;
+            width: 30px;
+            text-align: center;
+        }
+        
+        .payment-option .fa-credit-card {
+            color: #3b82f6;
+        }
+        
+        .payment-option .fa-paypal {
+            color: #00457c;
+        }
+        
+        .payment-option .fa-money-bill-wave {
+            color: #10b981;
+        }
+        
+        .payment-option input {
+            display: none;
+        }
+        
+        .payment-option label {
+            cursor: pointer;
+            flex: 1;
+        }
+        
+        .order-summary {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .summary-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            font-size: 18px;
+            font-weight: 700;
         }
         
         .submit-btn {
-            background: var(--primary);
+            display: block;
+            width: 100%;
+            background: linear-gradient(to right, var(--accent), #fdba74);
             color: white;
             border: none;
-            border-radius: 50px;
-            padding: 16px 40px;
+            padding: 16px;
+            border-radius: 8px;
             font-size: 18px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
-            display: block;
-            width: 100%;
-            margin-top: 20px;
-            grid-column: span 2;
-            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
         }
         
         .submit-btn:hover {
-            background: #1d4ed8;
-            transform: translateY(-3px);
-            box-shadow: 0 15px 25px rgba(37, 99, 235, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(249, 115, 22, 0.3);
         }
         
-        .payment-note {
-            text-align: center;
-            color: var(--gray);
-            margin-top: 20px;
-            font-size: 14px;
-            grid-column: span 2;
-        }
-        
-        .payment-note i {
-            color: var(--accent);
-            margin-right: 5px;
-        }
-        
-        /* Thank You Page Styles */
+        /* Thank You Page */
         .thank-you-section {
-            padding: 100px 0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+            display: none;
+            padding: 80px 0;
+            text-align: center;
         }
         
         .thank-you-container {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
-            text-align: center;
             background: white;
-            border-radius: 20px;
-            padding: 60px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 50px;
         }
         
         .thank-you-icon {
             width: 100px;
             height: 100px;
-            background: linear-gradient(to right, #10b981, #34d399);
+            background: var(--success);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 30px;
+            margin: 0 auto 25px;
             color: white;
-            font-size: 50px;
+            font-size: 48px;
         }
         
         .thank-you-title {
-            font-size: 42px;
-            color: var(--dark);
+            font-size: 32px;
             margin-bottom: 20px;
+            color: var(--dark);
         }
         
         .thank-you-text {
-            font-size: 20px;
+            font-size: 18px;
             color: var(--gray);
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             line-height: 1.6;
         }
         
-        .order-details {
+        .thank-you-details {
             background: #f8fafc;
-            border-radius: 12px;
-            padding: 30px;
-            margin: 40px 0;
+            border-radius: 10px;
+            padding: 20px;
             text-align: left;
+            margin: 30px 0;
         }
         
-        .order-title {
+        .thank-you-details h3 {
+            margin-bottom: 15px;
             font-size: 20px;
-            margin-bottom: 20px;
-            color: var(--dark);
-            padding-bottom: 10px;
+        }
+        
+        .detail-item {
+            display: flex;
+            padding: 10px 0;
             border-bottom: 1px solid #e2e8f0;
         }
         
-        .order-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        
-        .info-group p {
-            margin-bottom: 8px;
-        }
-        
-        .info-label {
-            color: var(--gray);
-            font-weight: 500;
-        }
-        
-        .info-value {
-            color: var(--dark);
+        .detail-label {
             font-weight: 600;
+            min-width: 150px;
         }
         
-        .back-to-home {
+        .continue-btn {
             display: inline-block;
             background: var(--primary);
             color: white;
+            padding: 12px 35px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .continue-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+        
+        /* Call to Action */
+        .cta-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .cta-container {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 16px;
+            padding: 50px;
+            color: white;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-container::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        
+        .cta-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
             padding: 15px 40px;
             border-radius: 50px;
             font-size: 18px;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s;
-            margin-top: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
-        .back-to-home:hover {
-            background: #1d4ed8;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background: var(--accent);
+            margin-top: 10px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 14px;
         }
         
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            .contact-form {
-                grid-template-columns: 1fr;
+            .header-container {
+                flex-direction: column;
+                padding: 20px 0;
             }
             
-            .form-group.full-width {
-                grid-column: span 1;
+            nav ul {
+                margin: 15px 0;
             }
             
-            .submit-btn {
-                grid-column: span 1;
+            .product-title {
+                font-size: 28px;
             }
             
-            .payment-note {
-                grid-column: span 1;
-            }
-            
-            .contact-container {
-                padding: 30px;
+            .cta-container {
+                padding: 30px 20px;
             }
             
             .thank-you-container {
-                padding: 30px;
+                padding: 30px 20px;
             }
             
-            .order-info {
-                grid-template-columns: 1fr;
+            .order-header, .order-body {
+                padding: 20px;
             }
         }
     </style>
@@ -339,7 +804,10 @@
             <div class="header-actions">
                 <a href="#"><i class="fas fa-search"></i></a>
                 <a href="#"><i class="fas fa-user"></i></a>
-                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <a href="#">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">1</span>
+                </a>
             </div>
         </div>
     </header>
@@ -422,8 +890,8 @@
                 </div>
                 
                 <div style="margin: 30px 0; text-align: center;">
-                    <a href="#" class="cta-button" style="width: 100%; display: block;">
-                        <i class="fas fa-shopping-cart"></i> Ajouter au panier - 249,99 €
+                    <a href="#order-section" class="cta-button" style="width: 100%; display: block;">
+                        <i class="fas fa-shopping-cart"></i> Commander maintenant - 249,99 €
                     </a>
                     <p style="margin-top: 15px; color: var(--gray); font-size: 14px;">
                         <i class="fas fa-shield-alt"></i> Garantie 2 ans • Livraison gratuite • Retours sous 30 jours
@@ -503,91 +971,129 @@
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
+    <!-- Order Form Section -->
+    <section id="order-section" class="order-section">
         <div class="container">
-            <div class="cta-container">
-                <h2 class="cta-title">Prêt à transformer votre quotidien ?</h2>
-                <p class="cta-text">Rejoignez les milliers d'utilisateurs satisfaits et faites de Pulse Pro votre compagnon santé et fitness.</p>
-                <a href="#" class="cta-button">Commander maintenant - Économisez 50€</a>
-                <p style="margin-top: 20px; opacity: 0.8;">Livraison express gratuite • Garantie satisfait ou remboursé 30 jours</p>
+            <div class="order-container">
+                <div class="order-header">
+                    <h2 class="order-title">Commander votre Pulse Pro</h2>
+                    <p class="order-subtitle">Remplissez le formulaire ci-dessous pour finaliser votre commande</p>
+                </div>
+                <div class="order-body">
+                    <form id="order-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullname">Nom complet *</label>
+                                <input type="text" id="fullname" name="fullname" required placeholder="Votre nom complet">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Téléphone *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="Votre numéro de téléphone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Adresse complète *</label>
+                            <textarea id="address" name="address" rows="3" required placeholder="Votre adresse complète"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="Votre adresse email">
+                        </div>
+                        
+                        <div class="payment-methods">
+                            <h3 class="payment-title">Méthode de paiement</h3>
+                            <div class="payment-options">
+                                <div class="payment-option" onclick="selectPayment(this, 'card')">
+                                    <i class="fas fa-credit-card"></i>
+                                    <label for="card">Carte de crédit</label>
+                                    <input type="radio" id="card" name="payment" value="card">
+                                </div>
+                                
+                                <div class="payment-option" onclick="selectPayment(this, 'paypal')">
+                                    <i class="fab fa-paypal"></i>
+                                    <label for="paypal">PayPal</label>
+                                    <input type="radio" id="paypal" name="payment" value="paypal">
+                                </div>
+                                
+                                <div class="payment-option active" onclick="selectPayment(this, 'cod')">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <label for="cod">Paiement à la livraison</label>
+                                    <input type="radio" id="cod" name="payment" value="cod" checked>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-summary">
+                            <h3 class="summary-title">Résumé de la commande</h3>
+                            <div class="summary-item">
+                                <span>Pulse Pro Montre Connectée</span>
+                                <span>249,99 €</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Livraison</span>
+                                <span>Gratuite</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Frais de service</span>
+                                <span>0,00 €</span>
+                            </div>
+                            <div class="summary-total">
+                                <span>Total</span>
+                                <span>249,99 €</span>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-check-circle"></i> Confirmer la commande
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form Section for Product Page -->
-    <section class="contact-section">
+    <!-- Thank You Section -->
+    <section id="thank-you-section" class="thank-you-section">
         <div class="container">
-            <div class="contact-container">
-                <h2 class="contact-title">Commander avec paiement à la livraison</h2>
-                <p class="contact-subtitle">Remplissez ce formulaire pour commander votre Pulse Pro. Vous ne payez qu'à la réception du produit!</p>
+            <div class="thank-you-container">
+                <div class="thank-you-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h2 class="thank-you-title">Merci pour votre commande !</h2>
+                <p class="thank-you-text">Votre commande de la montre Pulse Pro a été enregistrée avec succès. Nous vous enverrons un email de confirmation avec les détails de votre commande et les informations de suivi.</p>
                 
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="fullName">Nom complet</label>
-                        <input type="text" id="fullName" name="fullName" required placeholder="Votre nom complet">
+                <div class="thank-you-details">
+                    <h3>Détails de la commande</h3>
+                    <div class="detail-item">
+                        <span class="detail-label">Numéro de commande</span>
+                        <span>FT-2023-78945</span>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Adresse e-mail</label>
-                        <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                    <div class="detail-item">
+                        <span class="detail-label">Produit</span>
+                        <span>Pulse Pro Montre Connectée</span>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Numéro de téléphone</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="06 12 34 56 78">
+                    <div class="detail-item">
+                        <span class="detail-label">Méthode de paiement</span>
+                        <span>Paiement à la livraison</span>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="address">Adresse de livraison</label>
-                        <textarea id="address" name="address" required placeholder="Votre adresse complète avec code postal"></textarea>
+                    <div class="detail-item">
+                        <span class="detail-label">Total</span>
+                        <span>249,99 €</span>
                     </div>
-                    
-                    <div class="form-group full-width">
-                        <label>Méthode de paiement</label>
-                        
-                        <div class="payment-option selected" onclick="selectPayment(this)">
-                            <div class="payment-header">
-                                <div class="payment-icon">
-                                    <i class="fas fa-money-bill-wave"></i>
-                                </div>
-                                <div class="payment-title">Paiement à la livraison</div>
-                            </div>
-                            <p class="payment-desc">Payez en espèces ou par carte bancaire lorsque vous recevez votre produit</p>
-                        </div>
-                        
-                        <div class="payment-option" onclick="selectPayment(this)">
-                            <div class="payment-header">
-                                <div class="payment-icon">
-                                    <i class="fas fa-credit-card"></i>
-                                </div>
-                                <div class="payment-title">Paiement en ligne</div>
-                            </div>
-                            <p class="payment-desc">Payez maintenant par carte bancaire ou portefeuille électronique</p>
-                        </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Date de livraison estimée</span>
+                        <span>3-5 jours ouvrables</span>
                     </div>
-                    
-                    <div class="form-group full-width">
-                        <label for="quantity">Quantité</label>
-                        <select id="quantity" name="quantity">
-                            <option value="1">1 unité - 249,99 €</option>
-                            <option value="2">2 unités - 499,98 €</option>
-                            <option value="3">3 unités - 749,97 €</option>
-                            <option value="4">4 unités - 999,96 €</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group full-width">
-                        <label for="message">Message supplémentaire (optionnel)</label>
-                        <textarea id="message" name="message" placeholder="Des instructions spéciales pour la livraison?"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Confirmer la commande</button>
-                    
-                    <p class="payment-note">
-                        <i class="fas fa-lock"></i> Vos informations sont sécurisées. Aucun paiement ne sera effectué avant la réception du produit.
-                    </p>
-                </form>
+                </div>
+                
+                <p class="thank-you-text">Un représentant de notre équipe vous contactera par téléphone dans les prochaines heures pour confirmer votre commande.</p>
+                
+                <a href="#" class="continue-btn">
+                    <i class="fas fa-shopping-bag"></i> Continuer mes achats
+                </a>
             </div>
         </div>
     </section>
@@ -645,69 +1151,8 @@
         </div>
     </footer>
 
-    <!-- Thank You Page -->
-    <section id="thankYouPage" class="thank-you-section" style="display: none;">
-        <div class="container">
-            <div class="thank-you-container">
-                <div class="thank-you-icon">
-                    <i class="fas fa-check"></i>
-                </div>
-                <h2 class="thank-you-title">Merci pour votre commande!</h2>
-                <p class="thank-you-text">
-                    Votre commande pour la montre Pulse Pro a été confirmée avec succès. 
-                    Notre équipe vous contactera dans les 24 heures pour confirmer les détails de livraison.
-                </p>
-                
-                <div class="order-details">
-                    <h3 class="order-title">Détails de votre commande</h3>
-                    <div class="order-info">
-                        <div class="info-group">
-                            <p><span class="info-label">Numéro de commande:</span> <span class="info-value">FT-2023-7584</span></p>
-                            <p><span class="info-label">Produit:</span> <span class="info-value">Pulse Pro Montre Connectée</span></p>
-                            <p><span class="info-label">Quantité:</span> <span class="info-value">1</span></p>
-                        </div>
-                        <div class="info-group">
-                            <p><span class="info-label">Méthode de paiement:</span> <span class="info-value">Paiement à la livraison</span></p>
-                            <p><span class="info-label">Prix total:</span> <span class="info-value">249,99 €</span></p>
-                            <p><span class="info-label">Livraison estimée:</span> <span class="info-value">2-3 jours ouvrables</span></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <p class="thank-you-text">
-                    Un e-mail de confirmation a été envoyé à <strong>client@email.com</strong>. 
-                    Vous pouvez suivre votre commande dans votre espace client.
-                </p>
-                
-                <!-- Contact Form for Thank You Page -->
-                <div style="margin-top: 40px; text-align: left;">
-                    <h3 style="text-align: center; margin-bottom: 20px;">Besoin d'aide? Contactez-nous</h3>
-                    <form class="contact-form" style="background: #f8fafc; padding: 20px; border-radius: 12px;">
-                        <div class="form-group">
-                            <label for="thankYouName">Votre nom</label>
-                            <input type="text" id="thankYouName" placeholder="Votre nom">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="thankYouEmail">Votre e-mail</label>
-                            <input type="email" id="thankYouEmail" placeholder="votre@email.com">
-                        </div>
-                        
-                        <div class="form-group full-width">
-                            <label for="thankYouMessage">Votre message</label>
-                            <textarea id="thankYouMessage" placeholder="Comment pouvons-nous vous aider?" rows="4"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">Envoyer le message</button>
-                    </form>
-                </div>
-                
-                <a href="#" class="back-to-home">Retour à l'accueil</a>
-            </div>
-        </div>
-    </section>
-
     <script>
+        // Change main product image
         function changeImage(src) {
             document.getElementById('mainImage').src = src;
             
@@ -718,34 +1163,37 @@
             event.currentTarget.classList.add('active');
         }
         
-        function selectPayment(element) {
-            // Remove selected class from all payment options
-            document.querySelectorAll('.payment-option').forEach(option => {
-                option.classList.remove('selected');
-            });
+        // Select payment method
+        function selectPayment(element, method) {
+            const paymentOptions = document.querySelectorAll('.payment-option');
+            paymentOptions.forEach(option => option.classList.remove('active'));
             
-            // Add selected class to clicked payment option
-            element.classList.add('selected');
+            element.classList.add('active');
+            document.querySelector(`input[value="${method}"]`).checked = true;
         }
         
-        // Handle form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        // Handle order form submission
+        document.getElementById('order-form').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Show thank you page
-            document.getElementById('thankYouPage').style.display = 'block';
+            // Form validation
+            const fullname = document.getElementById('fullname').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+            const email = document.getElementById('email').value;
             
-            // Scroll to thank you page
-            document.getElementById('thankYouPage').scrollIntoView({ behavior: 'smooth' });
+            if (!fullname || !phone || !address || !email) {
+                alert('Veuillez remplir tous les champs obligatoires.');
+                return;
+            }
             
-            // Hide other sections
-            document.querySelector('header').style.display = 'none';
-            document.querySelector('.product-section').style.display = 'none';
-            document.querySelector('.features-section').style.display = 'none';
-            document.querySelector('.benefits-section').style.display = 'none';
-            document.querySelector('.cta-section').style.display = 'none';
-            document.querySelector('.contact-section').style.display = 'none';
-            document.querySelector('footer').style.display = 'none';
+            // Show thank you section
+            document.getElementById('thank-you-section').style.display = 'block';
+            
+            // Scroll to thank you section
+            document.getElementById('thank-you-section').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
         });
     </script>
 </body>
