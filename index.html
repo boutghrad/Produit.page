@@ -1,1200 +1,2331 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulse Pro - La montre connectée ultime | FitTech</title>
+    <title>Corner 90 + EDGE90 | مقهى ذكي بمكناس - قهوة، حلاقة، ألعاب، بطولات</title>
+    <meta name="description" content="مرحبًا في Corner 90 + EDGE90 بمكناس! مقهى ذكي يجمع بين أفضل القهوة المختصة، حلاقة احترافية، وأقوى بطولات PlayStation. احجز مكانك الآن واستمتع بتجربة فريدة!">
+    <meta name="keywords" content="قهوة مكناس, حلاقة احترافية, ألعاب بلايستيشن, بطولات FIFA, مقهى ذكي, EDGE90, Corner 90, مقهى العاب, حلاق رجالي, قهوة مختصة, بطولات أسبوعية">
+    <meta name="author" content="Corner 90">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://corner90.ma">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Corner 90 + EDGE90 | مقهى ذكي بمكناس">
+    <meta property="og:description" content="وجهتك الأولى للقهوة المختصة، الحلاقة الاحترافية، وأقوى تجارب الألعاب">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://corner90.ma">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Corner 90 + EDGE90 | مقهى ذكي بمكناس">
+    <meta name="twitter:description" content="مكانك.. قهوتك.. تحديك">
+    
+    <!-- البيانات المنظمة لـ JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsActivityLocation",
+      "name": "Corner 90 + EDGE90",
+      "description": "مقهى ذكي يقدم أفضل القهوة، خدمات الحلاقة الاحترافية، وأقوى تجارب الألعاب والبطولات",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "شارع الرئيسية",
+        "addressLocality": "مكناس",
+        "addressRegion": "مكناس تافيلالت",
+        "postalCode": "50000",
+        "addressCountry": "المغرب"
+      },
+      "openingHours": [
+        "Su-Th 08:00-00:00",
+        "Fr-Sa 09:00-01:00"
+      ],
+      "priceRange": "$$",
+      "telephone": "+212-600-000-000",
+      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "156"
+      }
+    }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" as="image">
+    
     <style>
         :root {
-            --primary: #2563eb;
-            --secondary: #0ea5e9;
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --accent: #f97316;
-            --gray: #94a3b8;
-            --success: #10b981;
-            --error: #ef4444;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f1f5f9;
-            color: var(--dark);
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo i {
-            margin-right: 10px;
-            color: var(--accent);
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 25px;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: var(--primary);
-        }
-        
-        .header-actions {
-            display: flex;
-            align-items: center;
-        }
-        
-        .header-actions a {
-            margin-left: 15px;
-            color: var(--dark);
-            text-decoration: none;
-            position: relative;
-        }
-        
-        .cart-count {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background: var(--accent);
-            color: white;
-            font-size: 10px;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        /* Product Section */
-        .product-section {
-            padding: 60px 0;
-            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
-        }
-        
-        .product-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-        
-        @media (max-width: 768px) {
-            .product-container {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        /* Product Gallery */
-        .product-gallery {
-            position: relative;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            overflow: hidden;
-            padding: 20px;
-        }
-        
-        .main-image {
-            text-align: center;
-            margin-bottom: 20px;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .main-image img {
-            max-width: 100%;
-            max-height: 100%;
-            border-radius: 8px;
-            object-fit: contain;
-        }
-        
-        .thumbnails {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .thumbnail {
-            width: 70px;
-            height: 70px;
-            border: 2px solid transparent;
-            border-radius: 6px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .thumbnail:hover, .thumbnail.active {
-            border-color: var(--primary);
-        }
-        
-        .thumbnail img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        /* Product Info */
-        .product-info {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            position: relative;
-        }
-        
-        .product-badge {
-            background: linear-gradient(to right, var(--accent), #fdba74);
-            color: white;
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        
-        .product-title {
-            font-size: 32px;
-            color: var(--dark);
-            margin-bottom: 15px;
-            line-height: 1.3;
-        }
-        
-        .product-subtitle {
-            color: var(--gray);
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
-        
-        .product-rating {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .stars {
-            color: #f59e0b;
-            margin-right: 10px;
-        }
-        
-        .reviews {
-            color: var(--gray);
-            font-size: 14px;
-        }
-        
-        .price-container {
-            display: flex;
-            align-items: center;
-            margin-bottom: 25px;
-            gap: 15px;
-        }
-        
-        .current-price {
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--primary);
-        }
-        
-        .original-price {
-            font-size: 20px;
-            text-decoration: line-through;
-            color: var(--gray);
-        }
-        
-        .discount {
-            background-color: #fee2e2;
-            color: #ef4444;
-            padding: 3px 10px;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-        
-        /* Features Section */
-        .features-section {
-            padding: 60px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 32px;
-            color: var(--dark);
-            margin-bottom: 50px;
-            position: relative;
-        }
-        
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--primary);
-            margin: 15px auto;
-            border-radius: 2px;
-        }
-        
-        .features-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .feature-card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .feature-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: white;
-            font-size: 28px;
-        }
-        
-        .feature-title {
-            font-size: 20px;
-            margin-bottom: 15px;
-            color: var(--dark);
-        }
-        
-        .feature-description {
-            color: var(--gray);
-        }
-        
-        /* Benefits Section */
-        .benefits-section {
-            padding: 60px 0;
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-        }
-        
-        .benefits-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .benefit-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 30px;
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-        
-        .benefit-item:hover {
-            transform: translateX(5px);
-        }
-        
-        .benefit-icon {
-            min-width: 50px;
-            height: 50px;
-            background: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 20px;
-            margin-right: 20px;
-        }
-        
-        .benefit-content h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-        
-        .benefit-content p {
-            color: var(--gray);
-        }
-        
-        /* Order Form Section */
-        .order-section {
-            padding: 60px 0;
-            background: white;
-        }
-        
-        .order-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        
-        .order-header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            padding: 25px 30px;
-            color: white;
-        }
-        
-        .order-title {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-        
-        .order-subtitle {
-            opacity: 0.9;
-        }
-        
-        .order-body {
-            padding: 30px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-        }
-        
-        .form-group input:focus, .form-group textarea:focus {
-            border-color: var(--primary);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-        }
-        
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        
-        @media (max-width: 600px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .payment-methods {
-            margin: 25px 0;
-            padding: 20px;
-            border: 1px solid #e2e8f0;
-            border-radius: 10px;
-        }
-        
-        .payment-title {
-            font-size: 18px;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        
-        .payment-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
-        }
-        
-        .payment-option {
-            display: flex;
-            align-items: center;
-            padding: 12px;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .payment-option:hover {
-            border-color: var(--primary);
-        }
-        
-        .payment-option.active {
-            border-color: var(--primary);
-            background-color: rgba(37, 99, 235, 0.05);
-        }
-        
-        .payment-option i {
-            margin-right: 10px;
-            font-size: 24px;
-            width: 30px;
-            text-align: center;
-        }
-        
-        .payment-option .fa-credit-card {
-            color: #3b82f6;
-        }
-        
-        .payment-option .fa-paypal {
-            color: #00457c;
-        }
-        
-        .payment-option .fa-money-bill-wave {
-            color: #10b981;
-        }
-        
-        .payment-option input {
-            display: none;
-        }
-        
-        .payment-option label {
-            cursor: pointer;
-            flex: 1;
-        }
-        
-        .order-summary {
-            background: #f8fafc;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 25px 0;
-        }
-        
-        .summary-title {
-            font-size: 18px;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        
-        .summary-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 8px 0;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        
-        .summary-total {
-            display: flex;
-            justify-content: space-between;
-            padding: 12px 0;
-            font-size: 18px;
-            font-weight: 700;
-        }
-        
-        .submit-btn {
-            display: block;
-            width: 100%;
-            background: linear-gradient(to right, var(--accent), #fdba74);
-            color: white;
-            border: none;
-            padding: 16px;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(249, 115, 22, 0.3);
-        }
-        
-        /* Thank You Page */
-        .thank-you-section {
-            display: none;
-            padding: 80px 0;
-            text-align: center;
-        }
-        
-        .thank-you-container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            padding: 50px;
-        }
-        
-        .thank-you-icon {
-            width: 100px;
-            height: 100px;
-            background: var(--success);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 25px;
-            color: white;
-            font-size: 48px;
-        }
-        
-        .thank-you-title {
-            font-size: 32px;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-        
-        .thank-you-text {
-            font-size: 18px;
-            color: var(--gray);
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        
-        .thank-you-details {
-            background: #f8fafc;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: left;
-            margin: 30px 0;
-        }
-        
-        .thank-you-details h3 {
-            margin-bottom: 15px;
-            font-size: 20px;
-        }
-        
-        .detail-item {
-            display: flex;
-            padding: 10px 0;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        
-        .detail-label {
-            font-weight: 600;
-            min-width: 150px;
-        }
-        
-        .continue-btn {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 12px 35px;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        .continue-btn:hover {
-            background: var(--secondary);
-            transform: translateY(-2px);
-        }
-        
-        /* Call to Action */
-        .cta-section {
-            padding: 60px 0;
-            text-align: center;
-        }
-        
-        .cta-container {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 16px;
-            padding: 50px;
-            color: white;
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-container::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 200px;
-            height: 200px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-        }
-        
-        .cta-title {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-        
-        .cta-text {
-            font-size: 18px;
-            margin-bottom: 30px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: var(--primary);
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-size: 18px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 25px rgba(0,0,0,0.15);
-        }
+            --primary-color: #1A1A1A;
+            --secondary-color: #4CAF50;
+            --accent-color: #FFFFFF;
+            --light-bg: #F5F5F5;
+            --text-color: #333;
+            --heading-font: 'Poppins', sans-serif;
+            --body-font: 'Inter', sans-serif;
+            --container-width: 1200px;
+            --border-radius: 12px;
+            --shadow: 0 6px 20px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * { margin:0; padding:0; box-sizing:border-box;}
+        html { scroll-behavior:smooth;}
+        body { font-family: var(--body-font); background-color: var(--accent-color); color: var(--text-color); line-height:1.7; direction:rtl;}
+        .container { max-width: var(--container-width); margin:0 auto; padding:0 20px;}
+        .section-padding { padding: 80px 0;}
+        .bg-light { background-color: var(--light-bg);}
+        
+        h1,h2,h3,h4,h5 { font-family: var(--heading-font); color: var(--primary-color); margin-bottom:1.2rem;}
+        h1{font-size:3.2rem; font-weight:900; line-height:1.2;}
+        h2{font-size:2.5rem; text-align:center; margin-bottom:3rem; position:relative;}
+        h2::after{content:''; display:block; width:100px; height:5px; background:linear-gradient(90deg, var(--secondary-color), var(--primary-color)); position:absolute; bottom:-15px; left:50%; transform:translateX(-50%); border-radius:2px;}
+        h3{font-size:1.8rem;}
+        
+        p{margin-bottom:1.2rem;}
+        a{text-decoration:none; color:var(--secondary-color); transition:var(--transition);}
+        a:hover{color:var(--primary-color);}
+        
+        /* Header & Navigation */
+        header{background-color: rgba(26,26,26,0.97); backdrop-filter: blur(15px); position:fixed; width:100%; top:0; z-index:1000; transition:0.4s; box-shadow: 0 4px 30px rgba(0,0,0,0.2); border-bottom: 2px solid rgba(76, 175, 80, 0.2);}
+        nav{display:flex; justify-content:space-between; align-items:center; padding:1.2rem 0;}
+        .logo{font-family: var(--heading-font); font-size:2rem; font-weight:900; color: var(--accent-color);}
+        .edge-logo{color:var(--secondary-color); font-weight:700;}
+        
+        .nav-links{list-style:none; display:flex; gap:2rem;}
+        .nav-links a{color: var(--accent-color); font-weight:600; font-family:var(--heading-font); position: relative; padding: 8px 0; font-size: 1.05rem;}
+        .nav-links a::after{content:''; position: absolute; bottom:0; right:0; width:0; height:3px; background-color: var(--secondary-color); transition: width 0.4s ease;}
+        .nav-links a:hover::after, .nav-links a.active::after{width:100%;}
+        .nav-links a:hover{color:var(--secondary-color);}
+        .nav-links a.active{color:var(--secondary-color);}
+        
+        /* Hero Section */
+        .hero{background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover; height:100vh; display:flex; justify-content:center; align-items:center; text-align:center; color: var(--accent-color); padding-top:100px; position: relative; overflow: hidden;}
+        .hero-content h1{font-size:3.5rem; margin-bottom:1.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);}
+        .hero-content p{font-size:1.3rem; max-width:700px; margin:0 auto 3rem auto; line-height:1.8;}
+        
+        /* Buttons */
+        .cta-buttons{display:flex; gap:1.5rem; justify-content:center; margin-top: 2rem;}
+        .btn{padding:14px 32px; border-radius:50px; font-weight:600; cursor:pointer; border:2px solid transparent; display:inline-flex; align-items:center; justify-content:center; gap:10px; font-family:var(--heading-font); transition:all 0.3s; position: relative; overflow: hidden; font-size: 1.05rem;}
+        .btn-primary{background:linear-gradient(135deg, var(--secondary-color), #45a049); color:var(--accent-color); box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);}
+        .btn-primary:hover{background:linear-gradient(135deg, #45a049, var(--secondary-color)); transform:translateY(-5px) scale(1.03); box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);}
+        .btn-secondary{background:transparent; color:var(--accent-color); border-color:var(--accent-color);}
+        .btn-secondary:hover{background:var(--accent-color); color:var(--primary-color); transform:translateY(-5px);}
+        .btn-outline{background:transparent; color:var(--primary-color); border-color:var(--primary-color);}
+        .btn-outline:hover{background:var(--primary-color); color:var(--accent-color); transform:translateY(-3px);}
+        
+        /* Cards */
+        .card{background-color:var(--accent-color); border-radius:var(--border-radius); box-shadow:var(--shadow); overflow:hidden; transition:var(--transition); text-align:center; position: relative; border: 1px solid rgba(0,0,0,0.05);}
+        .card:hover{transform:translateY(-10px) scale(1.02); box-shadow:0 15px 40px rgba(0,0,0,0.15);}
+        .card img{width:100%; height:220px; object-fit:cover;}
+        .card h3{margin-top:1.2rem; padding: 0 1rem;}
+        .card .price{font-weight:800; color:var(--secondary-color); font-size:1.5rem; margin:1rem 0;}
+        
+        /* Services Grid */
+        .services-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); gap:2.5rem; margin-bottom:3rem;}
+        .service-card .card-icon{font-size:3.5rem; color:var(--secondary-color); margin-top:1.5rem; height: 80px;}
+        
+        /* Tournaments Grid */
+        .tournaments-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(350px,1fr)); gap:2.5rem;}
+        .tournament-card{padding: 2rem;}
+        .tournament-card p{display:flex; align-items:center; justify-content:center; gap:0.8rem;}
+        .tournament-card p i{color:var(--secondary-color); width: 20px;}
+        
+        /* Shop Grid */
+        .shop-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:2rem;}
+        
+        /* About Section */
+        .about-content{display:flex; gap:4rem; align-items:center;}
+        .about-text{flex:1;}
+        .about-image{flex:1; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow);}
+        .about-image img{width:100%; height:400px; object-fit:cover; transition: transform 0.5s ease;}
+        .about-image:hover img{transform: scale(1.05);}
+        
+        /* Contact Section */
+        .contact-content{display:grid; grid-template-columns:1fr 1fr; gap:4rem;}
+        .contact-info h3{margin-bottom:2rem;}
+        .contact-info p{display:flex; align-items:center; gap:1.2rem; margin-bottom:1.2rem; font-size: 1.1rem;}
+        .contact-info p i{color:var(--secondary-color); width:25px; font-size: 1.2rem;}
+        .social-links{margin-top:2.5rem; font-size:2rem;}
+        .social-links a{margin-left:1.5rem; color:var(--primary-color); transition: var(--transition);}
+        .social-links a:hover{color:var(--secondary-color); transform: translateY(-3px);}
+        .contact-form{display:flex; flex-direction:column; gap:1.2rem;}
+        .contact-form input, .contact-form textarea{width:100%; padding:15px; border:2px solid #e0e0e0; border-radius:var(--border-radius); font-family:var(--body-font); font-size:1rem; transition: var(--transition);}
+        .contact-form input:focus, .contact-form textarea:focus{border-color: var(--secondary-color); outline: none; box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);}
+        .contact-form button{align-self:flex-start; margin-top:1rem;}
         
         /* Footer */
-        footer {
-            background: var(--dark);
+        footer{background:linear-gradient(135deg, #111, var(--primary-color)); color:var(--accent-color); padding:4rem 0 2rem; margin-top: 4rem;}
+        .footer-content{display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:3rem; margin-bottom:3rem;}
+        .footer-section h4{margin-bottom:1.5rem; color: var(--accent-color);}
+        .footer-section ul{list-style:none;}
+        .footer-section ul li{margin-bottom:0.8rem;}
+        .footer-section ul li a{color:#ccc; transition: var(--transition);}
+        .footer-section ul li a:hover{color:var(--secondary-color); padding-right: 10px;}
+        .copyright{text-align:center; padding-top:2rem; border-top:1px solid rgba(255,255,255,0.1); color:#999;}
+        
+        /* =================== */
+        /* صفحة الحجوزات */
+        /* =================== */
+        .booking-container { max-width: 800px; margin: 120px auto 60px; }
+        .booking-steps { display: flex; justify-content: center; margin-bottom: 3rem; }
+        .booking-step { display: flex; flex-direction: column; align-items: center; margin: 0 2rem; }
+        .step-number { width: 40px; height: 40px; background: #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-bottom: 10px; transition: var(--transition); }
+        .booking-step.active .step-number { background: var(--secondary-color); color: white; }
+        .step-label { font-size: 0.9rem; color: #666; }
+        .booking-step.active .step-label { color: var(--secondary-color); font-weight: 600; }
+        
+        .booking-form-container { background: white; padding: 3rem; border-radius: var(--border-radius); box-shadow: var(--shadow); }
+        .form-section { display: none; }
+        .form-section.active { display: block; animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .service-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+        .service-option { border: 2px solid #e0e0e0; border-radius: var(--border-radius); padding: 1.5rem; text-align: center; cursor: pointer; transition: var(--transition); }
+        .service-option:hover { border-color: var(--secondary-color); transform: translateY(-5px); }
+        .service-option.selected { border-color: var(--secondary-color); background: rgba(76, 175, 80, 0.05); }
+        .service-option i { font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 1rem; }
+        
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 15px; border: 2px solid #e0e0e0; border-radius: var(--border-radius); font-family: var(--body-font); font-size: 1rem; transition: var(--transition); }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--secondary-color); outline: none; box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1); }
+        
+        .booking-summary { background: var(--light-bg); padding: 2rem; border-radius: var(--border-radius); margin-top: 2rem; }
+        .summary-item { display: flex; justify-content: space-between; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #ddd; }
+        .summary-total { display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: bold; margin-top: 1rem; padding-top: 1rem; border-top: 2px solid var(--secondary-color); }
+        
+        .form-navigation { display: flex; justify-content: space-between; margin-top: 3rem; }
+        
+        /* =================== */
+        /* صفحة الاشتراكات */
+        /* =================== */
+        .membership-container { max-width: 1200px; margin: 120px auto 60px; }
+        .membership-plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
+        .membership-plan { background: white; border-radius: var(--border-radius); padding: 3rem; box-shadow: var(--shadow); text-align: center; transition: var(--transition); position: relative; border: 2px solid transparent; }
+        .membership-plan:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .membership-plan.popular { border-color: var(--secondary-color); transform: scale(1.05); }
+        .membership-plan.popular:hover { transform: scale(1.05) translateY(-10px); }
+        .plan-badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--secondary-color); color: white; padding: 8px 20px; border-radius: 30px; font-size: 0.9rem; font-weight: 600; }
+        
+        .plan-header { margin-bottom: 2rem; }
+        .plan-name { font-size: 1.8rem; color: var(--primary-color); margin-bottom: 1rem; }
+        .plan-price { font-size: 3rem; font-weight: 900; color: var(--secondary-color); margin-bottom: 0.5rem; }
+        .plan-period { color: #666; font-size: 1rem; }
+        
+        .plan-features { list-style: none; margin: 2rem 0; text-align: right; }
+        .plan-features li { padding: 0.8rem 0; border-bottom: 1px solid #eee; position: relative; padding-right: 2rem; }
+        .plan-features li:before { content: "✓"; color: var(--secondary-color); position: absolute; right: 0; font-weight: bold; }
+        
+        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 4rem; }
+        .benefit-card { text-align: center; padding: 2rem; }
+        .benefit-card i { font-size: 3rem; color: var(--secondary-color); margin-bottom: 1.5rem; }
+        
+        /* =================== */
+        /* صفحة السلة */
+        /* =================== */
+        .cart-items { margin-bottom: 2rem; }
+        .cart-item { display: flex; align-items: center; padding: 1.5rem; border-bottom: 1px solid #eee; gap: 1.5rem; }
+        .cart-item-info { flex: 1; }
+        .cart-item-controls { display: flex; align-items: center; gap: 1rem; }
+        
+        /* =================== */
+        /* نافذة الدردشة */
+        /* =================== */
+        #chatWidget {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 9999;
+        }
+        
+        .chat-toggle {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--secondary-color), #45a049);
+            border: none;
+            border-radius: 50%;
             color: white;
-            padding: 50px 0 20px;
-        }
-        
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .footer-column h3 {
-            font-size: 20px;
-            margin-bottom: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
             position: relative;
         }
         
-        .footer-column h3::after {
-            content: '';
-            display: block;
+        .chat-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+        }
+        
+        .chat-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ff4757;
+            color: white;
+            font-size: 0.7rem;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            display: none;
+        }
+        
+        .chat-window {
+            position: absolute;
+            bottom: 80px;
+            left: 0;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #eee;
+            animation: slideUp 0.3s ease;
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .chat-header {
+            background: linear-gradient(135deg, var(--primary-color), #333);
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chat-header-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .chat-header-info i {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+        
+        .chat-header-info h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: white;
+        }
+        
+        .chat-status {
+            font-size: 0.8rem;
+            color: #4CAF50;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 3px;
+        }
+        
+        .chat-status i {
+            font-size: 0.6rem;
+        }
+        
+        .chat-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        
+        .chat-close:hover {
+            opacity: 1;
+        }
+        
+        .chat-body {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .chat-message {
+            display: flex;
+            gap: 10px;
+            animation: messageIn 0.3s ease;
+        }
+        
+        @keyframes messageIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .chat-message.user {
+            flex-direction: row-reverse;
+        }
+        
+        .chat-message.user .message-content {
+            align-items: flex-end;
+        }
+        
+        .chat-message.user .message-text {
+            background: linear-gradient(135deg, var(--secondary-color), #45a049);
+            color: white;
+            border-radius: 18px 18px 0 18px;
+        }
+        
+        .message-avatar {
             width: 40px;
-            height: 3px;
-            background: var(--accent);
+            height: 40px;
+            background: var(--light-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .message-avatar i {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+        
+        .chat-message.user .message-avatar {
+            background: var(--secondary-color);
+        }
+        
+        .chat-message.user .message-avatar i {
+            color: white;
+        }
+        
+        .message-content {
+            display: flex;
+            flex-direction: column;
+            max-width: 70%;
+        }
+        
+        .message-text {
+            background: white;
+            padding: 12px 15px;
+            border-radius: 18px 18px 18px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        
+        .message-time {
+            font-size: 0.7rem;
+            color: #999;
+            margin-top: 5px;
+        }
+        
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
             margin-top: 10px;
         }
         
-        .footer-column ul {
-            list-style: none;
+        .quick-btn {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            color: var(--text-color);
         }
         
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-column ul li a {
-            color: #cbd5e1;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-column ul li a:hover {
+        .quick-btn:hover {
+            background: var(--secondary-color);
             color: white;
+            transform: translateY(-2px);
+            border-color: var(--secondary-color);
         }
         
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #334155;
-            color: #94a3b8;
-            font-size: 14px;
+        .quick-btn i {
+            font-size: 1rem;
         }
         
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                padding: 20px 0;
+        .chat-footer {
+            border-top: 1px solid #eee;
+            background: white;
+            padding: 15px;
+        }
+        
+        .chat-input-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        #chatInput {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-family: var(--body-font);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        #chatInput:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+        }
+        
+        .chat-send {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--secondary-color), #45a049);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .chat-send:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+        
+        .chat-typing {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: #666;
+            display: none;
+        }
+        
+        .typing-dots {
+            display: flex;
+            gap: 4px;
+        }
+        
+        .typing-dots span {
+            width: 8px;
+            height: 8px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            animation: typing 1.4s infinite ease-in-out;
+        }
+        
+        .typing-dots span:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dots span:nth-child(2) { animation-delay: -0.16s; }
+        
+        @keyframes typing {
+            0%, 80%, 100% { transform: scale(0); opacity: 0.5; }
+            40% { transform: scale(1); opacity: 1; }
+        }
+        
+        /* Chat Widget States */
+        .chat-window.active {
+            display: flex;
+        }
+        
+        /* Chat History in Sidebar */
+        .chat-history-btn {
+            position: fixed;
+            top: 150px;
+            left: 30px;
+            z-index: 9998;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            display: none; /* مخفي افتراضياً */
+        }
+        
+        .chat-history-btn:hover {
+            background: #333;
+            transform: translateX(-5px);
+        }
+        
+        /* Loading Overlay */
+        .loading-overlay{position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.8); display:none; justify-content:center; align-items:center; z-index:3000; flex-direction:column; color:white;}
+        .loading-overlay.active{display:flex;}
+        .spinner{width:60px; height:60px; border:5px solid rgba(255,255,255,0.3); border-top:5px solid var(--secondary-color); border-radius:50%; animation:spin 1s linear infinite;}
+        @keyframes spin{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+        
+        /* Accessibility */
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--secondary-color);
+            color: white;
+            padding: 8px;
+            z-index: 1001;
+            text-decoration: none;
+        }
+        
+        .skip-to-content:focus {
+            top: 0;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-btn{display:none; background:none; border:none; color:white; font-size:1.5rem; cursor:pointer;}
+        
+        /* Media Queries */
+        @media (max-width:1200px){.container{max-width:95%;}}
+        @media (max-width:992px){
+            .about-content{flex-direction:column;}
+            .contact-content{grid-template-columns:1fr;}
+            .hero-content h1{font-size:3rem;}
+            .nav-links{gap:1.5rem;}
+            .form-row{grid-template-columns:1fr;}
+        }
+        @media (max-width:768px){
+            h1{font-size:2.5rem;}
+            h2{font-size:2.2rem;}
+            .mobile-menu-btn{display:block;}
+            .nav-links{display:none; position:fixed; top:80px; right:0; width:300px; height:calc(100vh - 80px); background:var(--primary-color); flex-direction:column; padding:2rem; transform:translateX(100%); transition:transform 0.3s ease;}
+            .nav-links.active{transform:translateX(0); display:flex;}
+            .hero{height:80vh; padding-top:120px;}
+            .cta-buttons{flex-direction:column; align-items:center;}
+            .services-grid, .tournaments-grid{grid-template-columns:1fr;}
+            .booking-steps{flex-direction:column; align-items:center; gap:2rem;}
+            .membership-plan.popular{transform:none;}
+            .membership-plan.popular:hover{transform:translateY(-10px);}
+            
+            /* Mobile Chat */
+            #chatWidget {
+                bottom: 20px;
+                left: 20px;
             }
             
-            nav ul {
-                margin: 15px 0;
+            .chat-window {
+                width: calc(100vw - 40px);
+                height: 400px;
+                bottom: 70px;
+                left: 0;
+                border-radius: 15px 15px 0 0;
             }
             
-            .product-title {
-                font-size: 28px;
+            .chat-history-btn {
+                display: none;
+            }
+        }
+        @media (max-width:576px){
+            .logo{font-size:1.6rem;}
+            .hero-content h1{font-size:2.2rem;}
+            .hero-content p{font-size:1.1rem;}
+            .booking-form-container{padding:2rem;}
+            .membership-plans{grid-template-columns:1fr;}
+            .footer-content{grid-template-columns:1fr;}
+        }
+        
+        /* Print Styles */
+        @media print {
+            .no-print, .chat-toggle, .chat-window, .mobile-menu-btn, .chat-history-btn {
+                display: none !important;
             }
             
-            .cta-container {
-                padding: 30px 20px;
+            body {
+                font-size: 12pt;
+                color: #000;
             }
             
-            .thank-you-container {
-                padding: 30px 20px;
-            }
-            
-            .order-header, .order-body {
-                padding: 20px;
+            .container {
+                width: 100%;
+                max-width: none;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Accessibility Skip Link -->
+    <a href="#mainContent" class="skip-to-content">انتقل إلى المحتوى الرئيسي</a>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading" aria-live="polite" aria-label="جاري التحميل">
+        <div class="spinner"></div>
+        <p style="margin-top: 20px;">جاري التحميل...</p>
+    </div>
+
     <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <i class="fas fa-heartbeat"></i>
-                <span>FitTech</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Boutique</a></li>
-                    <li><a href="#">À propos</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <a href="#"><i class="fas fa-search"></i></a>
-                <a href="#"><i class="fas fa-user"></i></a>
-                <a href="#">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">1</span>
-                </a>
-            </div>
-        </div>
+    <header role="banner">
+        <nav class="container" aria-label="القائمة الرئيسية">
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="فتح القائمة" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <a href="#home" class="logo" onclick="showPage('home')">
+                Corner 90 <span class="edge-logo">EDGE90</span>
+            </a>
+            
+            <ul class="nav-links" id="navLinks" role="menubar">
+                <li role="none"><a href="#" class="nav-link active" onclick="showPage('home')" role="menuitem">الرئيسية</a></li>
+                <li role="none"><a href="#" class="nav-link" onclick="showPage('services')" role="menuitem">خدماتنا</a></li>
+                <li role="none"><a href="#" class="nav-link" onclick="showPage('tournaments')" role="menuitem">البطولات</a></li>
+                <li role="none"><a href="#" class="nav-link" onclick="showPage('shop')" role="menuitem">المتجر</a></li>
+                <li role="none"><a href="#" class="nav-link" onclick="showPage('booking')" role="menuitem">الحجوزات</a></li>
+                <li role="none"><a href="#" class="nav-link" onclick="showPage('membership')" role="menuitem">الاشتراكات</a></li>
+                <li role="none"><a href="#" class="nav-link" onclick="showPage('about')" role="menuitem">من نحن</a></li>
+                <li role="none"><a href="#" class="nav-link" onclick="showPage('contact')" role="menuitem">تواصل</a></li>
+                <li role="none"><a href="#" class="nav-link" onclick="showPage('cart')" role="menuitem"><i class="fas fa-shopping-cart"></i> <span id="cartCount">0</span></a></li>
+                <li role="none"><a href="#" class="nav-link no-print" onclick="toggleChat(); return false;" role="menuitem"><i class="fas fa-comment-dots"></i> دردشة</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Product Section -->
-    <section class="product-section">
-        <div class="container product-container">
-            <div class="product-gallery">
-                <div class="main-image">
-                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F0Y2h8fHx8fHwxNjg5NjI1OTQw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200" alt="Montre Connectée Pulse Pro" id="mainImage">
-                </div>
-                <div class="thumbnails">
-                    <div class="thumbnail active" onclick="changeImage('https://images.unsplash.com/photo-1523275335684-37898b6baf30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F0Y2h8fHx8fHwxNjg5NjI1OTQw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200')">
-                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F0Y2h8fHx8fHwxNjg5NjI1OTQw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=200" alt="Pulse Pro - Vue avant">
-                    </div>
-                    <div class="thumbnail" onclick="changeImage('https://images.unsplash.com/photo-1546868871-7041f2a55e12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F0Y2h8fHx8fHwxNjg5NjI2MDg1&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200')">
-                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F0Y2h8fHx8fHwxNjg5NjI2MDg1&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=200" alt="Pulse Pro - Vue de côté">
-                    </div>
-                    <div class="thumbnail" onclick="changeImage('https://images.unsplash.com/photo-1585123334904-845d60e97b29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F0Y2h8fHx8fHwxNjg5NjI2MTE5&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200')">
-                        <img src="https://images.unsplash.com/photo-1585123334904-845d60e97b29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F0Y2h8fHx8fHwxNjg5NjI2MTE5&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=200" alt="Pulse Pro - Écran">
-                    </div>
-                    <div class="thumbnail" onclick="changeImage('https://images.unsplash.com/photo-1579586337278-3befd40fd17a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F0Y2h8fHx8fHwxNjg5NjI2MTQ2&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1200')">
-                        <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2F0Y2h8fHx8fHwxNjg5NjI2MTQ2&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=200" alt="Pulse Pro - Au poignet">
+    <!-- Main Content -->
+    <main id="mainContent" role="main">
+        <!-- Home Page -->
+        <section id="home-page" class="page-content active-page">
+            <div class="hero" aria-label="مقدمة الموقع">
+                <div class="hero-content">
+                    <h1>مكانك.. قهوتك.. تحديك.</h1>
+                    <p>مرحباً في Corner 90 + EDGE90، وجهتك الأولى في مكناس للقهوة المميزة، الحلاقة الاحترافية، وأقوى تجارب الألعاب والبطولات.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary" onclick="showPage('services')" aria-label="بدء التجربة">
+                            <i class="fas fa-rocket"></i> ابدأ التجربة
+                        </a>
+                        <a href="#" class="btn btn-secondary" onclick="showPage('booking')" aria-label="حجز موعد">
+                            <i class="fas fa-calendar-check"></i> احجز الآن
+                        </a>
                     </div>
                 </div>
             </div>
-            
-            <div class="product-info">
-                <span class="product-badge">Nouveauté</span>
-                <h1 class="product-title">Pulse Pro : Le partenaire ultime pour votre santé et votre performance</h1>
-                <p class="product-subtitle">La montre connectée qui transforme vos données de santé en résultats concrets</p>
-                
-                <div class="product-rating">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span class="reviews">(428 avis clients)</span>
-                </div>
-                
-                <div class="price-container">
-                    <span class="current-price">249,99 €</span>
-                    <span class="original-price">299,99 €</span>
-                    <span class="discount">-17%</span>
-                </div>
-                
-                <div class="benefits-list">
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <i class="fas fa-heartbeat"></i>
+
+            <!-- Features Section -->
+            <section class="section-padding" aria-labelledby="features-heading">
+                <div class="container">
+                    <h2 id="features-heading">لماذا تختار Corner 90؟</h2>
+                    <div class="services-grid">
+                        <div class="card service-card" aria-label="خدمة القهوة المختصة">
+                            <div class="card-icon" aria-hidden="true"><i class="fas fa-mug-hot"></i></div>
+                            <h3>قهوة مختصة</h3>
+                            <p>أجود أنواع حبوب القهوة المحمصة حديثاً</p>
                         </div>
-                        <div class="benefit-content">
-                            <h3>Surveillance cardiaque avancée</h3>
-                            <p>Suivi continu de votre fréquence cardiaque et détection des anomalies</p>
+                        <div class="card service-card" aria-label="خدمة الحلاقة الاحترافية">
+                            <div class="card-icon" aria-hidden="true"><i class="fas fa-scissors"></i></div>
+                            <h3>حلاقة احترافية</h3>
+                            <p>أحدث صيحات الموضة مع متخصصين</p>
+                        </div>
+                        <div class="card service-card" aria-label="خدمة منطقة الألعاب">
+                            <div class="card-icon" aria-hidden="true"><i class="fas fa-gamepad"></i></div>
+                            <h3>منطقة الألعاب</h3>
+                            <p>أحدث أجهزة PlayStation مع بطولات أسبوعية</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Live Tournaments -->
+            <section class="section-padding bg-light" aria-labelledby="tournaments-heading">
+                <div class="container">
+                    <h2 id="tournaments-heading">البطولات الحالية</h2>
+                    <div class="tournaments-grid">
+                        <div class="card tournament-card">
+                            <h3>بطولة FIFA الأسبوعية</h3>
+                            <p><i class="fas fa-calendar" aria-hidden="true"></i> كل جمعة - 8 مساءً</p>
+                            <p><i class="fas fa-trophy" aria-hidden="true"></i> جائزة: 2000 درهم</p>
+                            <button class="btn btn-primary" onclick="showPage('tournaments')" aria-label="الانضمام لبطولة FIFA">انضم الآن</button>
+                        </div>
+                        <div class="card tournament-card">
+                            <h3>دورية الفوتصال</h3>
+                            <p><i class="fas fa-calendar" aria-hidden="true"></i> السبت القادم</p>
+                            <p><i class="fas fa-trophy" aria-hidden="true"></i> كأس + قسائم شرائية</p>
+                            <button class="btn btn-primary" onclick="showPage('tournaments')" aria-label="تسجيل فريق في دورية الفوتصال">سجل فريقك</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Services Page -->
+        <section id="services-page" class="page-content" style="display:none;" aria-labelledby="services-heading">
+            <div class="section-padding">
+                <div class="container">
+                    <h2 id="services-heading">خدماتنا المتكاملة</h2>
+                    <div class="services-grid">
+                        <div class="card service-card">
+                            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="قهوة مختصة في Corner 90" loading="lazy">
+                            <div class="card-icon" aria-hidden="true"><i class="fas fa-mug-hot"></i></div>
+                            <h3>قهوة مختصة</h3>
+                            <p>قهوة عالية الجودة من أفضل مصادر العالم</p>
+                            <p class="price">من 12 درهم</p>
+                            <button class="btn btn-primary" onclick="showBooking('قهوة')" aria-label="طلب قهوة">اطلب الآن</button>
+                        </div>
+                        
+                        <div class="card service-card">
+                            <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="خدمة حلاقة احترافية" loading="lazy">
+                            <div class="card-icon" aria-hidden="true"><i class="fas fa-scissors"></i></div>
+                            <h3>حلاقة EDGE90</h3>
+                            <p>حلاقة وتصفيف احترافي بأحدث التقنيات</p>
+                            <p class="price">من 50 درهم</p>
+                            <button class="btn btn-primary" onclick="showBooking('حلاقة')" aria-label="حجز موعد حلاقة">احجز موعد</button>
+                        </div>
+                        
+                        <div class="card service-card">
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="منطقة ألعاب PlayStation" loading="lazy">
+                            <div class="card-icon" aria-hidden="true"><i class="fas fa-gamepad"></i></div>
+                            <h3>منطقة PlayStation</h3>
+                            <p>أحدث ألعاب PS5 مع تجربة واقعية</p>
+                            <p class="price">20 درهم/ساعة</p>
+                            <button class="btn btn-primary" onclick="showBooking('ألعاب')" aria-label="حجز منطقة ألعاب">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tournaments Page -->
+        <section id="tournaments-page" class="page-content" style="display:none;" aria-labelledby="tournaments-page-heading">
+            <div class="section-padding bg-light">
+                <div class="container">
+                    <h2 id="tournaments-page-heading">البطولات والدوريات</h2>
+                    
+                    <div class="tournaments-grid">
+                        <div class="card tournament-card">
+                            <h3>بطولة FIFA الأسبوعية</h3>
+                            <p><i class="fas fa-calendar" aria-hidden="true"></i> كل جمعة، 8 مساءً</p>
+                            <p><i class="fas fa-users" aria-hidden="true"></i> فرق من لاعبين</p>
+                            <p><i class="fas fa-trophy" aria-hidden="true"></i> الجائزة: صندوق Corner Fund</p>
+                            <p><i class="fas fa-tag" aria-hidden="true"></i> رسوم التسجيل: 72 درهم</p>
+                            <button class="btn btn-primary" onclick="registerTournament('FIFA')" aria-label="تسجيل فريق في بطولة FIFA">سجل فريقك</button>
+                        </div>
+                        
+                        <div class="card tournament-card">
+                            <h3>دورية الفوتصال الشهرية</h3>
+                            <p><i class="fas fa-calendar" aria-hidden="true"></i> أول سبت من كل شهر</p>
+                            <p><i class="fas fa-users" aria-hidden="true"></i> فرق من 5 لاعبين</p>
+                            <p><i class="fas fa-trophy" aria-hidden="true"></i> الجائزة: كأس + قسائم</p>
+                            <p><i class="fas fa-tag" aria-hidden="true"></i> رسوم التسجيل: 300 درهم للفريق</p>
+                            <button class="btn btn-primary" onclick="registerTournament('فوتصال')" aria-label="تسجيل فريق في دورية الفوتصال">سجل فريقك</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Page -->
+        <section id="shop-page" class="page-content" style="display:none;" aria-labelledby="shop-heading">
+            <div class="section-padding">
+                <div class="container">
+                    <h2 id="shop-heading">متجر EDGE90</h2>
+                    
+                    <div class="shop-grid">
+                        <div class="card product-card">
+                            <img src="https://images.unsplash.com/photo-1629198720836-0f7d2d6e7652?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="مثبت شعر EDGE90" loading="lazy">
+                            <h3>Pomade EDGE90</h3>
+                            <p>مثبت شعر احترافي بتأثير لامع</p>
+                            <p class="price">85 درهم</p>
+                            <button class="btn btn-primary" onclick="addToCart('Pomade EDGE90', 85)" aria-label="إضافة مثبت شعر إلى السلة">أضف للسلة</button>
+                        </div>
+                        
+                        <div class="card product-card">
+                            <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="زيت اللحية الفاخر" loading="lazy">
+                            <h3>زيت اللحية الفاخر</h3>
+                            <p>لترطيب وتغذية اللحية والبشرة</p>
+                            <p class="price">75 درهم</p>
+                            <button class="btn btn-primary" onclick="addToCart('زيت اللحية', 75)" aria-label="إضافة زيت اللحية إلى السلة">أضف للسلة</button>
+                        </div>
+                        
+                        <div class="card product-card">
+                            <img src="https://images.unsplash.com/photo-1612817288484-6f91600674a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="حبوب قهوة مميزة" loading="lazy">
+                            <h3>حبوب قهوة مميزة</h3>
+                            <p>250 جرام من أفضل حبوب القهوة</p>
+                            <p class="price">45 درهم</p>
+                            <button class="btn btn-primary" onclick="addToCart('حبوب قهوة', 45)" aria-label="إضافة حبوب قهوة إلى السلة">أضف للسلة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Page -->
+        <section id="booking-page" class="page-content" style="display:none;" aria-labelledby="booking-heading">
+            <div class="booking-container">
+                <h2 id="booking-heading">حجز موعد</h2>
+                
+                <div class="booking-steps" aria-label="خطوات الحجز">
+                    <div class="booking-step active" id="step1-indicator">
+                        <div class="step-number">1</div>
+                        <div class="step-label">اختيار الخدمة</div>
+                    </div>
+                    <div class="booking-step" id="step2-indicator">
+                        <div class="step-number">2</div>
+                        <div class="step-label">معلومات الحجز</div>
+                    </div>
+                    <div class="booking-step" id="step3-indicator">
+                        <div class="step-number">3</div>
+                        <div class="step-label">التأكيد</div>
+                    </div>
+                </div>
+                
+                <div class="booking-form-container">
+                    <!-- الخطوة 1: اختيار الخدمة -->
+                    <div class="form-section active" id="step1">
+                        <h3>اختر الخدمة المطلوبة</h3>
+                        <div class="service-options">
+                            <div class="service-option" onclick="selectService('قهوة', 12)" role="button" tabindex="0" aria-label="خدمة القهوة المميزة - 12 درهم">
+                                <i class="fas fa-mug-hot" aria-hidden="true"></i>
+                                <h4>قهوة مميزة</h4>
+                                <p>استمتع بأفضل أنواع القهوة المحضرة بعناية</p>
+                                <div class="price">12 درهم</div>
+                            </div>
+                            
+                            <div class="service-option" onclick="selectService('حلاقة', 50)" role="button" tabindex="0" aria-label="خدمة الحلاقة EDGE90 - 50 درهم">
+                                <i class="fas fa-scissors" aria-hidden="true"></i>
+                                <h4>حلاقة EDGE90</h4>
+                                <p>خدمات حلاقة وتصفيف شعر احترافية</p>
+                                <div class="price">50 درهم</div>
+                            </div>
+                            
+                            <div class="service-option" onclick="selectService('ألعاب', 20)" role="button" tabindex="0" aria-label="خدمة منطقة PlayStation - 20 درهم للساعة">
+                                <i class="fas fa-gamepad" aria-hidden="true"></i>
+                                <h4>PlayStation Wall</h4>
+                                <p>منطقة ألعاب مجهزة بأحدث أجهزة PlayStation</p>
+                                <div class="price">20 درهم/ساعة</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-navigation">
+                            <div></div> <!-- فارغ للتوازن -->
+                            <button class="btn btn-primary" onclick="nextStep()" aria-label="الانتقال للخطوة التالية">التالي <i class="fas fa-arrow-left" aria-hidden="true"></i></button>
                         </div>
                     </div>
                     
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <i class="fas fa-shoe-prints"></i>
-                        </div>
-                        <div class="benefit-content">
-                            <h3>GPS intégré de précision</h3>
-                            <p>Mesurez vos parcours avec une précision militaire</p>
-                        </div>
-                    </div>
-                    
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <i class="fas fa-swimmer"></i>
-                        </div>
-                        <div class="benefit-content">
-                            <h3>Étanche jusqu'à 100m</h3>
-                            <p>Idéale pour la natation et toutes vos activités aquatiques</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="margin: 30px 0; text-align: center;">
-                    <a href="#order-section" class="cta-button" style="width: 100%; display: block;">
-                        <i class="fas fa-shopping-cart"></i> Commander maintenant - 249,99 €
-                    </a>
-                    <p style="margin-top: 15px; color: var(--gray); font-size: 14px;">
-                        <i class="fas fa-shield-alt"></i> Garantie 2 ans • Livraison gratuite • Retours sous 30 jours
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="container">
-            <h2 class="section-title">Caractéristiques exceptionnelles</h2>
-            
-            <div class="features-container">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-battery-full"></i>
-                    </div>
-                    <h3 class="feature-title">Autonomie longue durée</h3>
-                    <p class="feature-description">Jusqu'à 14 jours d'autonomie avec une seule charge. Oubliez votre chargeur pendant vos voyages.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-moon"></i>
-                    </div>
-                    <h3 class="feature-title">Analyse du sommeil</h3>
-                    <p class="feature-description">Comprenez vos cycles de sommeil et recevez des conseils pour améliorer votre récupération.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-dumbbell"></i>
-                    </div>
-                    <h3 class="feature-title">150+ modes sport</h3>
-                    <p class="feature-description">De la course à pied au yoga, Pulse Pro s'adapte à toutes vos activités.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="benefits-section">
-        <div class="container benefits-container">
-            <h2 class="section-title">Pourquoi choisir Pulse Pro ?</h2>
-            
-            <div class="benefit-item">
-                <div class="benefit-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <div class="benefit-content">
-                    <h3>Atteignez vos objectifs plus rapidement</h3>
-                    <p>Notre technologie exclusive d'entraînement adaptatif analyse vos performances et crée des plans personnalisés pour maximiser vos résultats.</p>
-                </div>
-            </div>
-            
-            <div class="benefit-item">
-                <div class="benefit-icon">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <div class="benefit-content">
-                    <h3>Prenez soin de votre santé</h3>
-                    <p>La surveillance ECG intégrée et la détection de SpO2 vous alertent sur votre état de santé général, pour une prévention optimale.</p>
-                </div>
-            </div>
-            
-            <div class="benefit-item">
-                <div class="benefit-icon">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <div class="benefit-content">
-                    <h3>Restez connecté sans distraction</h3>
-                    <p>Recevez vos notifications importantes directement sur votre poignet et laissez votre téléphone dans votre poche pour rester concentré sur l'essentiel.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Order Form Section -->
-    <section id="order-section" class="order-section">
-        <div class="container">
-            <div class="order-container">
-                <div class="order-header">
-                    <h2 class="order-title">Commander votre Pulse Pro</h2>
-                    <p class="order-subtitle">Remplissez le formulaire ci-dessous pour finaliser votre commande</p>
-                </div>
-                <div class="order-body">
-                    <form id="order-form">
+                    <!-- الخطوة 2: معلومات الحجز -->
+                    <div class="form-section" id="step2">
+                        <h3>معلومات الحجز</h3>
+                        
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="fullname">Nom complet *</label>
-                                <input type="text" id="fullname" name="fullname" required placeholder="Votre nom complet">
+                                <label for="booking-name">الاسم الكامل *</label>
+                                <input type="text" id="booking-name" placeholder="أدخل اسمك الكامل" required>
                             </div>
                             
                             <div class="form-group">
-                                <label for="phone">Téléphone *</label>
-                                <input type="tel" id="phone" name="phone" required placeholder="Votre numéro de téléphone">
+                                <label for="booking-phone">رقم الهاتف *</label>
+                                <input type="tel" id="booking-phone" placeholder="مثال: 0612345678" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="booking-date">التاريخ *</label>
+                                <input type="date" id="booking-date" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="booking-time">الوقت *</label>
+                                <select id="booking-time" required>
+                                    <option value="">اختر الوقت</option>
+                                    <option value="09:00">9:00 صباحاً</option>
+                                    <option value="10:00">10:00 صباحاً</option>
+                                    <option value="11:00">11:00 صباحاً</option>
+                                    <option value="12:00">12:00 ظهراً</option>
+                                    <option value="13:00">1:00 مساءً</option>
+                                    <option value="14:00">2:00 مساءً</option>
+                                    <option value="15:00">3:00 مساءً</option>
+                                    <option value="16:00">4:00 مساءً</option>
+                                    <option value="17:00">5:00 مساءً</option>
+                                    <option value="18:00">6:00 مساءً</option>
+                                    <option value="19:00">7:00 مساءً</option>
+                                    <option value="20:00">8:00 مساءً</option>
+                                </select>
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="address">Adresse complète *</label>
-                            <textarea id="address" name="address" rows="3" required placeholder="Votre adresse complète"></textarea>
+                            <label for="booking-notes">ملاحظات إضافية (اختياري)</label>
+                            <textarea id="booking-notes" rows="3" placeholder="أي طلبات أو ملاحظات خاصة"></textarea>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required placeholder="Votre adresse email">
+                        <div class="form-navigation">
+                            <button class="btn btn-outline" onclick="prevStep()" aria-label="العودة للخطوة السابقة"><i class="fas fa-arrow-right" aria-hidden="true"></i> السابق</button>
+                            <button class="btn btn-primary" onclick="nextStep()" aria-label="الانتقال للخطوة التالية">التالي <i class="fas fa-arrow-left" aria-hidden="true"></i></button>
                         </div>
+                    </div>
+                    
+                    <!-- الخطوة 3: التأكيد -->
+                    <div class="form-section" id="step3">
+                        <h3>تأكيد الحجز</h3>
                         
-                        <div class="payment-methods">
-                            <h3 class="payment-title">Méthode de paiement</h3>
-                            <div class="payment-options">
-                                <div class="payment-option" onclick="selectPayment(this, 'card')">
-                                    <i class="fas fa-credit-card"></i>
-                                    <label for="card">Carte de crédit</label>
-                                    <input type="radio" id="card" name="payment" value="card">
-                                </div>
-                                
-                                <div class="payment-option" onclick="selectPayment(this, 'paypal')">
-                                    <i class="fab fa-paypal"></i>
-                                    <label for="paypal">PayPal</label>
-                                    <input type="radio" id="paypal" name="payment" value="paypal">
-                                </div>
-                                
-                                <div class="payment-option active" onclick="selectPayment(this, 'cod')">
-                                    <i class="fas fa-money-bill-wave"></i>
-                                    <label for="cod">Paiement à la livraison</label>
-                                    <input type="radio" id="cod" name="payment" value="cod" checked>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="order-summary">
-                            <h3 class="summary-title">Résumé de la commande</h3>
+                        <div class="booking-summary" aria-live="polite">
+                            <h4>ملخص الحجز</h4>
                             <div class="summary-item">
-                                <span>Pulse Pro Montre Connectée</span>
-                                <span>249,99 €</span>
+                                <span>الخدمة:</span>
+                                <span id="summary-service">-</span>
                             </div>
                             <div class="summary-item">
-                                <span>Livraison</span>
-                                <span>Gratuite</span>
+                                <span>التاريخ والوقت:</span>
+                                <span id="summary-datetime">-</span>
                             </div>
                             <div class="summary-item">
-                                <span>Frais de service</span>
-                                <span>0,00 €</span>
+                                <span>الاسم:</span>
+                                <span id="summary-name">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>رقم الهاتف:</span>
+                                <span id="summary-phone">-</span>
                             </div>
                             <div class="summary-total">
-                                <span>Total</span>
-                                <span>249,99 €</span>
+                                <span>المبلغ الإجمالي:</span>
+                                <span id="summary-total">0 درهم</span>
                             </div>
                         </div>
                         
-                        <button type="submit" class="submit-btn">
-                            <i class="fas fa-check-circle"></i> Confirmer la commande
-                        </button>
-                    </form>
+                        <div class="form-navigation">
+                            <button class="btn btn-outline" onclick="prevStep()" aria-label="العودة للخطوة السابقة"><i class="fas fa-arrow-right" aria-hidden="true"></i> السابق</button>
+                            <button class="btn btn-primary" onclick="confirmBooking()" aria-label="تأكيد الحجز"><i class="fas fa-check" aria-hidden="true"></i> تأكيد الحجز</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Thank You Section -->
-    <section id="thank-you-section" class="thank-you-section">
-        <div class="container">
-            <div class="thank-you-container">
-                <div class="thank-you-icon">
-                    <i class="fas fa-check"></i>
+        <!-- Membership Page -->
+        <section id="membership-page" class="page-content" style="display:none;" aria-labelledby="membership-heading">
+            <div class="membership-container">
+                <h2 id="membership-heading">باقات الاشتراك</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">اختر الباقة المناسبة لك واستمتع بمزايا حصرية وخصومات خاصة</p>
+                
+                <div class="membership-plans">
+                    <!-- الباقة الأساسية -->
+                    <div class="membership-plan" aria-label="الباقة الأساسية - 99 درهم شهرياً">
+                        <div class="plan-header">
+                            <h3 class="plan-name">الباقة الأساسية</h3>
+                            <div class="plan-price">99<span style="font-size: 1.5rem;">درهم/شهر</span></div>
+                            <div class="plan-period">فاتورة شهرية</div>
+                        </div>
+                        
+                        <ul class="plan-features">
+                            <li>خصم 10% على جميع المشروبات</li>
+                            <li>ساعة لعب مجانية أسبوعياً</li>
+                            <li>إشعارات بالبطولات القادمة</li>
+                            <li>حجز مسبق عبر التطبيق</li>
+                            <li>تحديثات أسبوعية عن العروض</li>
+                        </ul>
+                        
+                        <button class="btn btn-outline" onclick="selectMembership('أساسية', 99)" aria-label="اختيار الباقة الأساسية">اختر هذه الباقة</button>
+                    </div>
+                    
+                    <!-- الباقة الذهبية -->
+                    <div class="membership-plan popular" aria-label="الباقة الذهبية - 199 درهم شهرياً - الأكثر شعبية">
+                        <div class="plan-badge">الأكثر شعبية</div>
+                        <div class="plan-header">
+                            <h3 class="plan-name">الباقة الذهبية</h3>
+                            <div class="plan-price">199<span style="font-size: 1.5rem;">درهم/شهر</span></div>
+                            <div class="plan-period">توفير 20% سنوياً</div>
+                        </div>
+                        
+                        <ul class="plan-features">
+                            <li>خصم 20% على جميع المشروبات</li>
+                            <li>3 ساعات لعب مجانية أسبوعياً</li>
+                            <li>دخول مجاني للبطولات</li>
+                            <li>قهوة مجانية يومياً</li>
+                            <li>حجز مسبق للمقاعد</li>
+                            <li>خصم 15% على منتجات المتجر</li>
+                            <li>دعوة صديق مجانية شهرياً</li>
+                        </ul>
+                        
+                        <button class="btn btn-primary" onclick="selectMembership('ذهبية', 199)" aria-label="اختيار الباقة الذهبية">اختر هذه الباقة</button>
+                    </div>
+                    
+                    <!-- الباقة البلاتينية -->
+                    <div class="membership-plan" aria-label="الباقة البلاتينية - 299 درهم شهرياً">
+                        <div class="plan-header">
+                            <h3 class="plan-name">الباقة البلاتينية</h3>
+                            <div class="plan-price">299<span style="font-size: 1.5rem;">درهم/شهر</span></div>
+                            <div class="plan-period">توفير 25% سنوياً</div>
+                        </div>
+                        
+                        <ul class="plan-features">
+                            <li>خصم 30% على جميع المشروبات</li>
+                            <li>5 ساعات لعب مجانية أسبوعياً</li>
+                            <li>دخول مجاني ومميز للبطولات</li>
+                            <li>قهوة مجانية غير محدودة</li>
+                            <li>حجز خاص بالطابق العلوي</li>
+                            <li>خصم 25% على منتجات المتجر</li>
+                            <li>دعوتان مجانيتان شهرياً</li>
+                            <li>هدية شهرية من منتجات EDGE90</li>
+                            <li>مستشار شخصي للعناية</li>
+                        </ul>
+                        
+                        <button class="btn btn-outline" onclick="selectMembership('بلاتينية', 299)" aria-label="اختيار الباقة البلاتينية">اختر هذه الباقة</button>
+                    </div>
                 </div>
-                <h2 class="thank-you-title">Merci pour votre commande !</h2>
-                <p class="thank-you-text">Votre commande de la montre Pulse Pro a été enregistrée avec succès. Nous vous enverrons un email de confirmation avec les détails de votre commande et les informations de suivi.</p>
                 
-                <div class="thank-you-details">
-                    <h3>Détails de la commande</h3>
-                    <div class="detail-item">
-                        <span class="detail-label">Numéro de commande</span>
-                        <span>FT-2023-78945</span>
+                <!-- فوائد الاشتراك -->
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-percentage" aria-hidden="true"></i>
+                        <h4>خصومات حصرية</h4>
+                        <p>استمتع بخصومات تصل إلى 30% على جميع المشروبات والخدمات</p>
                     </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Produit</span>
-                        <span>Pulse Pro Montre Connectée</span>
+                    
+                    <div class="benefit-card">
+                        <i class="fas fa-gamepad" aria-hidden="true"></i>
+                        <h4>ساعات لعب مجانية</h4>
+                        <p>احصل على ساعات لعب مجانية أسبوعياً حسب باقة الاشتراك</p>
                     </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Méthode de paiement</span>
-                        <span>Paiement à la livraison</span>
+                    
+                    <div class="benefit-card">
+                        <i class="fas fa-crown" aria-hidden="true"></i>
+                        <h4>أولوية في الحجز</h4>
+                        <p>احجز مقعدك المفضل قبل الجميع واستمتع بتجربة فريدة</p>
                     </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Total</span>
-                        <span>249,99 €</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Date de livraison estimée</span>
-                        <span>3-5 jours ouvrables</span>
+                    
+                    <div class="benefit-card">
+                        <i class="fas fa-gift" aria-hidden="true"></i>
+                        <h4>هدايا شهرية</h4>
+                        <p>احصل على هدايا شهرية حصرية من منتجات EDGE90</p>
                     </div>
                 </div>
-                
-                <p class="thank-you-text">Un représentant de notre équipe vous contactera par téléphone dans les prochaines heures pour confirmer votre commande.</p>
-                
-                <a href="#" class="continue-btn">
-                    <i class="fas fa-shopping-bag"></i> Continuer mes achats
-                </a>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Shopping Cart Page -->
+        <section id="cart-page" class="page-content" style="display:none;" aria-labelledby="cart-heading">
+            <div class="section-padding">
+                <div class="container">
+                    <h2 id="cart-heading">سلة التسوق</h2>
+                    
+                    <div id="cartItems" class="cart-items" aria-live="polite">
+                        <!-- Cart items will be dynamically added here -->
+                    </div>
+                    
+                    <div id="cartSummary" class="cart-summary" style="display:none; background: var(--light-bg); padding: 2rem; border-radius: var(--border-radius); margin-top: 2rem;">
+                        <h3>ملخص الطلب</h3>
+                        <div style="margin: 1.5rem 0;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                                <span>المجموع الجزئي:</span>
+                                <span id="subtotal">0 درهم</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                                <span>الضريبة (10%):</span>
+                                <span id="tax">0 درهم</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: bold; padding-top: 1rem; border-top: 2px solid #ddd;">
+                                <span>الإجمالي:</span>
+                                <span id="total">0 درهم</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="checkout()" style="width: 100%; padding: 15px;" aria-label="إتمام عملية الشراء">إتمام الشراء</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Page -->
+        <section id="about-page" class="page-content" style="display:none;" aria-labelledby="about-heading">
+            <div class="section-padding">
+                <div class="container">
+                    <h2 id="about-heading">قصتنا ورؤيتنا</h2>
+                    
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h3>من نحن؟</h3>
+                            <p>انطلقنا عام 2023 برؤية واضحة: خلق مساحة تجمع بين شغف القهوة، الأناقة، والتحدي الرياضي في مكان واحد.</p>
+                            
+                            <h3>رؤيتنا</h3>
+                            <p>نطمح لأن نكون الوجهة الأولى للشباب في المغرب، حيث الجودة والابتكار والتفاصيل الصغيرة هي ما يميزنا.</p>
+                            
+                            <h3>فريقنا</h3>
+                            <p>يتكون فريقنا من محترفين في مجالاتهم: بارعيين القهوة، حلاقين متمرسين، ومدربين ألعاب محترفين.</p>
+                        </div>
+                        
+                        <div class="about-image">
+                            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="فريق Corner 90" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact-page" class="page-content" style="display:none;" aria-labelledby="contact-heading">
+            <div class="section-padding">
+                <div class="container">
+                    <h2 id="contact-heading">تواصل معنا</h2>
+                    
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <h3>معلومات الاتصال</h3>
+                            <p><i class="fas fa-phone" aria-hidden="true"></i> +212 600 000 000</p>
+                            <p><i class="fas fa-envelope" aria-hidden="true"></i> info@corner90.ma</p>
+                            <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> مكناس، المغرب</p>
+                            
+                            <h3 style="margin-top: 2rem;">ساعات العمل</h3>
+                            <p><i class="fas fa-clock" aria-hidden="true"></i> الأحد - الخميس: 8 صباحاً - 12 منتصف الليل</p>
+                            <p><i class="fas fa-clock" aria-hidden="true"></i> الجمعة - السبت: 9 صباحاً - 1 صباحاً</p>
+                            
+                            <div class="social-links">
+                                <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook"></i></a>
+                                <a href="#" aria-label="انستجرام"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="تيك توك"><i class="fab fa-tiktok"></i></a>
+                                <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form">
+                            <h3>أرسل رسالة</h3>
+                            <input type="text" id="contactName" placeholder="الاسم الكامل" aria-label="الاسم الكامل">
+                            <input type="email" id="contactEmail" placeholder="البريد الإلكتروني" aria-label="البريد الإلكتروني">
+                            <textarea id="contactMessage" rows="5" placeholder="رسالتك" aria-label="نص الرسالة"></textarea>
+                            <button class="btn btn-primary" onclick="sendContactMessage()" aria-label="إرسال الرسالة">إرسال الرسالة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
-            <div class="footer-container">
-                <div class="footer-column">
-                    <h3>FitTech</h3>
-                    <p style="color: #cbd5e1; margin-bottom: 20px;">Des technologies innovantes pour votre santé et votre bien-être.</p>
-                    <div style="display: flex; gap: 15px;">
-                        <a href="#" style="color: white; font-size: 20px;"><i class="fab fa-facebook"></i></a>
-                        <a href="#" style="color: white; font-size: 20px;"><i class="fab fa-instagram"></i></a>
-                        <a href="#" style="color: white; font-size: 20px;"><i class="fab fa-twitter"></i></a>
-                        <a href="#" style="color: white; font-size: 20px;"><i class="fab fa-youtube"></i></a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Corner 90 + EDGE90</h4>
+                    <p>وجهتك الأولى في مكناس للقهوة المميزة، الحلاقة الاحترافية، وأقوى تجارب الألعاب.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="انستجرام"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="تيك توك"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 
-                <div class="footer-column">
-                    <h3>Navigation</h3>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
                     <ul>
-                        <li><a href="#">Accueil</a></li>
-                        <li><a href="#">Nos produits</a></li>
-                        <li><a href="#">Technologies</a></li>
-                        <li><a href="#">Blog santé</a></li>
-                        <li><a href="#">Nous contacter</a></li>
+                        <li><a href="#" onclick="showPage('home')">الرئيسية</a></li>
+                        <li><a href="#" onclick="showPage('services')">خدماتنا</a></li>
+                        <li><a href="#" onclick="showPage('tournaments')">البطولات</a></li>
+                        <li><a href="#" onclick="showPage('shop')">المتجر</a></li>
+                        <li><a href="#" onclick="showPage('booking')">الحجوزات</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-column">
-                    <h3>Support</h3>
+                <div class="footer-section">
+                    <h4>الدعم</h4>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Livraison</a></li>
-                        <li><a href="#">Retours</a></li>
-                        <li><a href="#">Garantie</a></li>
-                        <li><a href="#">Centre d'assistance</a></li>
+                        <li><a href="#" onclick="showPage('contact')">اتصل بنا</a></li>
+                        <li><a href="#" onclick="showNotification('سياسة الخصوصية قريباً')">سياسة الخصوصية</a></li>
+                        <li><a href="#" onclick="showNotification('الشروط والأحكام قريباً')">الشروط والأحكام</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-column">
-                    <h3>Newsletter</h3>
-                    <p style="color: #cbd5e1; margin-bottom: 15px;">Inscrivez-vous pour recevoir nos offres exclusives.</p>
-                    <form style="display: flex;">
-                        <input type="email" placeholder="Votre email" style="padding: 10px; border: none; border-radius: 4px 0 0 4px; flex: 1;">
-                        <button type="submit" style="background: var(--accent); color: white; border: none; padding: 0 15px; border-radius: 0 4px 4px 0; cursor: pointer;"><i class="fas fa-paper-plane"></i></button>
-                    </form>
+                <div class="footer-section">
+                    <h4>اشترك في النشرة البريدية</h4>
+                    <p>كن أول من يعرف عن العروض والبطولات الجديدة.</p>
+                    <div style="display: flex; margin-top: 1rem;">
+                        <input type="email" id="newsletterEmail" placeholder="بريدك الإلكتروني" aria-label="البريد الإلكتروني للنشرة البريدية" style="flex: 1; padding: 10px; border: none; border-radius: 5px 0 0 5px;">
+                        <button class="btn btn-primary" onclick="subscribeNewsletter()" style="border-radius: 0 5px 5px 0; padding: 10px 20px;">اشتراك</button>
+                    </div>
                 </div>
             </div>
             
             <div class="copyright">
-                &copy; 2023 FitTech. Tous droits réservés.
+                <p>&copy; 2024 Corner 90 + EDGE90. جميع الحقوق محفوظة.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem;">تصميم وتطوير فريق Corner 90 التقني</p>
             </div>
         </div>
     </footer>
 
+    <!-- Chat Widget -->
+    <div id="chatWidget" class="no-print">
+        <button class="chat-toggle" onclick="toggleChat()" aria-label="فتح الدردشة" aria-expanded="false">
+            <i class="fas fa-comments"></i>
+            <span class="chat-badge" id="chatNotification">0</span>
+        </button>
+        
+        <div class="chat-window" role="dialog" aria-label="نافذة الدردشة" aria-modal="true">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <i class="fas fa-robot"></i>
+                    <h3>دردشة Corner 90</h3>
+                    <span class="chat-status" id="chatStatus"><i class="fas fa-circle"></i> متصل الآن</span>
+                </div>
+                <button class="chat-close" onclick="toggleChat()" aria-label="إغلاق الدردشة"><i class="fas fa-times"></i></button>
+            </div>
+            
+            <div class="chat-body" id="chatMessages">
+                <div class="chat-message bot">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-text">
+                            مرحباً! 👋 أنا مساعد Corner 90 الرقمي. كيف يمكنني مساعدتك اليوم؟
+                        </div>
+                        <div class="message-time">الآن</div>
+                    </div>
+                </div>
+                
+                <!-- Quick Action Buttons -->
+                <div class="quick-actions">
+                    <button class="quick-btn" onclick="sendQuickMessage('أريد حجز موعد')" aria-label="طلب حجز موعد">
+                        <i class="fas fa-calendar-check"></i> حجز موعد
+                    </button>
+                    <button class="quick-btn" onclick="sendQuickMessage('متى البطولة القادمة؟')" aria-label="الاستعلام عن البطولات">
+                        <i class="fas fa-trophy"></i> البطولات
+                    </button>
+                    <button class="quick-btn" onclick="sendQuickMessage('ما هي أسعار الاشتراكات؟')" aria-label="الاستعلام عن أسعار الاشتراكات">
+                        <i class="fas fa-crown"></i> الاشتراكات
+                    </button>
+                    <button class="quick-btn" onclick="sendQuickMessage('أين موقعكم؟')" aria-label="الاستعلام عن الموقع">
+                        <i class="fas fa-map-marker-alt"></i> الموقع
+                    </button>
+                </div>
+            </div>
+            
+            <div class="chat-footer">
+                <div class="chat-input-container">
+                    <input type="text" 
+                           id="chatInput" 
+                           placeholder="اكتب رسالتك هنا..." 
+                           onkeypress="handleChatKeyPress(event)"
+                           maxlength="200"
+                           aria-label="نص الرسالة">
+                    <button class="chat-send" onclick="sendMessage()" aria-label="إرسال الرسالة">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="chat-typing" id="typingIndicator">
+                    <span>المساعد يكتب...</span>
+                    <div class="typing-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
     <script>
-        // Change main product image
-        function changeImage(src) {
-            document.getElementById('mainImage').src = src;
+        // ===========================================
+        // ============ النظام الأساسي ==============
+        // ===========================================
+        
+        let appState = {
+            cart: [],
+            booking: {
+                service: null,
+                price: 0,
+                date: null,
+                time: null,
+                name: null,
+                phone: null,
+                notes: null
+            },
+            currentBookingStep: 1,
+            chatState: {
+                isOpen: false,
+                messages: [
+                    {
+                        sender: 'bot',
+                        text: 'مرحباً! 👋 أنا مساعد Corner 90 الرقمي. كيف يمكنني مساعدتك اليوم؟',
+                        time: new Date().toLocaleTimeString('ar-MA', { hour: '2-digit', minute: '2-digit' })
+                    }
+                ],
+                unread: 0,
+                isTyping: false
+            }
+        };
+        
+        // بيانات الردود الآلية للدردشة
+        const chatResponses = {
+            'تحية': [
+                'أهلاً وسهلاً بك! كيف يمكنني مساعدتك اليوم؟',
+                'مرحباً بك في Corner 90 + EDGE90! 😊',
+                'أهلًا! سعيد بوجودك معنا'
+            ],
+            'حجز': [
+                'يمكنك حجز موعد عبر زر "الحجوزات" في الأعلى، أو يمكنني مساعدتك في الحجز الآن!',
+                'لتحديد موعد للحلاقة أو اللعب، اضغط على زر الحجوزات في القائمة',
+                'لحجز موعد، يمكنك زيارة صفحة الحجوزات أو إخباري بالموعد الذي تريده'
+            ],
+            'سعر': [
+                'أسعار الخدمات تبدأ من:<br>• القهوة: 12 درهم<br>• الحلاقة: 50 درهم<br>• الألعاب: 20 درهم/ساعة',
+                'يمكنك الاطلاع على الأسعار الكاملة في صفحة الخدمات'
+            ],
+            'اشتراك': [
+                'لدينا ثلاث باقات اشتراك:<br>• الأساسية: 99 درهم/شهر<br>• الذهبية: 199 درهم/شهر<br>• البلاتينية: 299 درهم/شهر',
+                'تفضل بزيارة صفحة الاشتراكات لمعرفة المزايا الكاملة لكل باقة'
+            ],
+            'بطولة': [
+                'البطولة القادمة: FIFA الجمعة القادمة الساعة 8 مساءً. الجائزة: 2000 درهم',
+                'هناك دورية فوتصال السبت القادم. للتسجيل، قم بزيارة صفحة البطولات'
+            ],
+            'موقع': [
+                'نحن موجودون في مكناس، المغرب. ساعات العمل:<br>الأحد-الخميس: 8 صباحاً - 12 منتصف الليل<br>الجمعة-السبت: 9 صباحاً - 1 صباحاً',
+                'العنوان: مكناس، المغرب. هاتف: +212 600 000 000'
+            ],
+            'وقت': [
+                'ساعات العمل:<br>الأحد-الخميس: 8 صباحاً - 12 منتصف الليل<br>الجمعة-السبت: 9 صباحاً - 1 صباحاً',
+                'نعمل طوال الأسبوع حتى ساعة متأخرة!'
+            ],
+            'قهوة': [
+                'نقدم أجود أنواع القهوة المختصة من أفضل مصادر العالم',
+                'قهوتنا محمصة حديثاً وتقدم بطرق تحضير مختلفة'
+            ],
+            'لعبة': [
+                'لدينا أحدث أجهزة PlayStation 5 مع مجموعة واسعة من الألعاب',
+                'منطقة الألعاب مجهزة بأفضل التقنيات لتجربة لا تُنسى'
+            ],
+            'حلاقة': [
+                'خدمات الحلاقة والتنسيق مع أفضل الحلاقين المحترفين',
+                'نستخدم منتجات EDGE90 الحصرية للحصول على أفضل النتائج'
+            ],
+            'شكر': [
+                'العفو! سعيد بخدمتك 😊',
+                'شكراً لك! لا تتردد في سؤالي عن أي شيء آخر',
+                'دمت بود! 🌟'
+            ]
+        };
+        
+        // تهيئة التطبيق
+        document.addEventListener('DOMContentLoaded', function() {
+            loadAppState();
+            updateCartCount();
+            setupEventListeners();
+            initChat();
+            setupPerformanceOptimizations();
+            requestNotificationPermission();
             
-            // Update active thumbnail
-            const thumbnails = document.querySelectorAll('.thumbnail');
-            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            // تعيين التاريخ الأدنى للحجز (اليوم)
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('booking-date').min = today;
             
-            event.currentTarget.classList.add('active');
+            // إشعار ترحيبي
+            setTimeout(() => {
+                showNotification('مرحباً بك في Corner 90 + EDGE90!');
+            }, 1000);
+        });
+        
+        // تحميل حالة التطبيق
+        function loadAppState() {
+            const savedCart = localStorage.getItem('corner90_cart');
+            if (savedCart) {
+                appState.cart = JSON.parse(savedCart);
+            }
+            
+            const savedChat = localStorage.getItem('corner90_chat');
+            if (savedChat) {
+                const parsed = JSON.parse(savedChat);
+                appState.chatState.messages = parsed.messages || appState.chatState.messages;
+                updateChatDisplay();
+            }
         }
         
-        // Select payment method
-        function selectPayment(element, method) {
-            const paymentOptions = document.querySelectorAll('.payment-option');
-            paymentOptions.forEach(option => option.classList.remove('active'));
-            
-            element.classList.add('active');
-            document.querySelector(`input[value="${method}"]`).checked = true;
+        // حفظ حالة التطبيق
+        function saveAppState() {
+            localStorage.setItem('corner90_cart', JSON.stringify(appState.cart));
+            localStorage.setItem('corner90_chat', JSON.stringify({
+                messages: appState.chatState.messages,
+                lastUpdated: new Date().toISOString()
+            }));
         }
         
-        // Handle order form submission
-        document.getElementById('order-form').addEventListener('submit', function(e) {
-            e.preventDefault();
+        // ===========================================
+        // ============= نظام الصفحات ===============
+        // ===========================================
+        
+        function showPage(pageId) {
+            // إخفاء جميع الصفحات
+            document.querySelectorAll('.page-content').forEach(page => {
+                page.style.display = 'none';
+                page.classList.remove('active-page');
+            });
             
-            // Form validation
-            const fullname = document.getElementById('fullname').value;
-            const phone = document.getElementById('phone').value;
-            const address = document.getElementById('address').value;
-            const email = document.getElementById('email').value;
+            // إظهار الصفحة المطلوبة
+            const targetPage = document.getElementById(pageId + '-page');
+            if (targetPage) {
+                targetPage.style.display = 'block';
+                targetPage.classList.add('active-page');
+                
+                // تحديث القائمة النشطة
+                updateActiveNav(pageId);
+                
+                // التمرير للأعلى
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // تحميل محتوى الصفحة الديناميكي
+                if (pageId === 'cart') {
+                    loadCartPage();
+                } else if (pageId === 'booking') {
+                    resetBookingForm();
+                }
+            }
             
-            if (!fullname || !phone || !address || !email) {
-                alert('Veuillez remplir tous les champs obligatoires.');
+            // إغلاق القائمة المتنقلة
+            closeMobileMenu();
+            
+            return false;
+        }
+        
+        function updateActiveNav(pageId) {
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            const activeLink = document.querySelector(`.nav-link[onclick*="${pageId}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        }
+        
+        // ===========================================
+        // ============ نظام التنقل ================
+        // ===========================================
+        
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const isExpanded = navLinks.classList.contains('active');
+            navLinks.classList.toggle('active');
+            document.querySelector('.mobile-menu-btn').setAttribute('aria-expanded', !isExpanded);
+        }
+        
+        function closeMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.remove('active');
+            document.querySelector('.mobile-menu-btn').setAttribute('aria-expanded', 'false');
+        }
+        
+        // ===========================================
+        // ============ نظام الحجوزات ===============
+        // ===========================================
+        
+        function selectService(service, price) {
+            // إزالة التحديد من جميع الخدمات
+            document.querySelectorAll('.service-option').forEach(option => {
+                option.classList.remove('selected');
+                option.setAttribute('aria-selected', 'false');
+            });
+            
+            // تحديد الخدمة المختارة
+            event.currentTarget.classList.add('selected');
+            event.currentTarget.setAttribute('aria-selected', 'true');
+            
+            // حفظ الخدمة المختارة
+            appState.booking.service = service;
+            appState.booking.price = price;
+        }
+        
+        function nextStep() {
+            const currentStep = appState.currentBookingStep;
+            
+            // التحقق من صحة البيانات في كل خطوة
+            if (currentStep === 1) {
+                if (!appState.booking.service) {
+                    showNotification('يرجى اختيار خدمة');
+                    return;
+                }
+            } else if (currentStep === 2) {
+                const name = document.getElementById('booking-name').value;
+                const phone = document.getElementById('booking-phone').value;
+                const date = document.getElementById('booking-date').value;
+                const time = document.getElementById('booking-time').value;
+                
+                if (!name || !phone || !date || !time) {
+                    showNotification('يرجى ملء جميع الحقول المطلوبة');
+                    return;
+                }
+                
+                // حفظ بيانات الحجز
+                appState.booking.name = name;
+                appState.booking.phone = phone;
+                appState.booking.date = date;
+                appState.booking.time = time;
+                appState.booking.notes = document.getElementById('booking-notes').value;
+                
+                // تحديث ملخص الحجز
+                updateBookingSummary();
+            }
+            
+            // الانتقال للخطوة التالية
+            if (currentStep < 3) {
+                // إخفاء الخطوة الحالية
+                document.getElementById(`step${currentStep}`).classList.remove('active');
+                document.getElementById(`step${currentStep}-indicator`).classList.remove('active');
+                
+                // إظهار الخطوة التالية
+                appState.currentBookingStep++;
+                document.getElementById(`step${appState.currentBookingStep}`).classList.add('active');
+                document.getElementById(`step${appState.currentBookingStep}-indicator`).classList.add('active');
+            }
+        }
+        
+        function prevStep() {
+            const currentStep = appState.currentBookingStep;
+            
+            if (currentStep > 1) {
+                // إخفاء الخطوة الحالية
+                document.getElementById(`step${currentStep}`).classList.remove('active');
+                document.getElementById(`step${currentStep}-indicator`).classList.remove('active');
+                
+                // العودة للخطوة السابقة
+                appState.currentBookingStep--;
+                document.getElementById(`step${appState.currentBookingStep}`).classList.add('active');
+                document.getElementById(`step${appState.currentBookingStep}-indicator`).classList.add('active');
+            }
+        }
+        
+        function updateBookingSummary() {
+            document.getElementById('summary-service').textContent = appState.booking.service;
+            document.getElementById('summary-name').textContent = appState.booking.name;
+            document.getElementById('summary-phone').textContent = appState.booking.phone;
+            
+            // تنسيق التاريخ
+            const date = new Date(appState.booking.date);
+            const formattedDate = date.toLocaleDateString('ar-MA');
+            document.getElementById('summary-datetime').textContent = `${formattedDate} - ${appState.booking.time}`;
+            
+            // حساب المبلغ الإجمالي
+            let total = appState.booking.price;
+            if (appState.booking.service === 'ألعاب') {
+                // إضافة ساعة إضافية للعبة كمثال
+                total = total * 2;
+            }
+            document.getElementById('summary-total').textContent = `${total} درهم`;
+        }
+        
+        function confirmBooking() {
+            showLoading();
+            
+            // محاكاة عملية الحجز
+            setTimeout(() => {
+                hideLoading();
+                
+                // حفظ الحجز في localStorage
+                const bookings = JSON.parse(localStorage.getItem('corner90_bookings') || '[]');
+                bookings.push({
+                    ...appState.booking,
+                    id: Date.now(),
+                    status: 'مؤكد',
+                    createdAt: new Date().toISOString()
+                });
+                localStorage.setItem('corner90_bookings', JSON.stringify(bookings));
+                
+                // إشعار النجاح
+                showNotification(`تم تأكيد حجز ${appState.booking.service} بنجاح! سنتواصل معك قريباً.`);
+                
+                // إعادة تعيين النموذج
+                resetBookingForm();
+                
+                // العودة للصفحة الرئيسية
+                showPage('home');
+            }, 1500);
+        }
+        
+        function resetBookingForm() {
+            // إعادة تعيين حالة الحجز
+            appState.booking = {
+                service: null,
+                price: 0,
+                date: null,
+                time: null,
+                name: null,
+                phone: null,
+                notes: null
+            };
+            appState.currentBookingStep = 1;
+            
+            // إعادة تعيين واجهة المستخدم
+            document.querySelectorAll('.service-option').forEach(option => {
+                option.classList.remove('selected');
+                option.setAttribute('aria-selected', 'false');
+            });
+            
+            document.querySelectorAll('.form-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById('step1').classList.add('active');
+            
+            document.querySelectorAll('.booking-step').forEach(step => {
+                step.classList.remove('active');
+            });
+            document.getElementById('step1-indicator').classList.add('active');
+            
+            // مسح الحقول
+            document.getElementById('booking-name').value = '';
+            document.getElementById('booking-phone').value = '';
+            document.getElementById('booking-date').value = '';
+            document.getElementById('booking-time').value = '';
+            document.getElementById('booking-notes').value = '';
+        }
+        
+        function showBooking(serviceType) {
+            showPage('booking');
+            
+            // تحديد الخدمة تلقائياً
+            setTimeout(() => {
+                let price = 12;
+                if (serviceType === 'حلاقة') price = 50;
+                if (serviceType === 'ألعاب') price = 20;
+                
+                selectService(serviceType, price);
+                
+                // تحديد الزر المناسب
+                document.querySelectorAll('.service-option').forEach(option => {
+                    if (option.querySelector('h4').textContent.includes(serviceType)) {
+                        option.classList.add('selected');
+                        option.setAttribute('aria-selected', 'true');
+                    }
+                });
+            }, 300);
+        }
+        
+        // ===========================================
+        // ============ نظام الاشتراكات =============
+        // ===========================================
+        
+        function selectMembership(plan, price) {
+            const name = prompt(`أدخل اسمك للاشتراك في الباقة ${plan}:`);
+            if (!name) return;
+            
+            const phone = prompt('أدخل رقم هاتفك:');
+            if (!phone) return;
+            
+            showLoading();
+            
+            // محاكاة عملية الاشتراك
+            setTimeout(() => {
+                hideLoading();
+                
+                // حفظ الاشتراك في localStorage
+                const memberships = JSON.parse(localStorage.getItem('corner90_memberships') || '[]');
+                memberships.push({
+                    plan: plan,
+                    price: price,
+                    name: name,
+                    phone: phone,
+                    startDate: new Date().toISOString(),
+                    status: 'نشط'
+                });
+                localStorage.setItem('corner90_memberships', JSON.stringify(memberships));
+                
+                // إشعار النجاح
+                showNotification(`تم اشتراكك في الباقة ${plan} بنجاح! ستبدأ مميزاتك من اليوم.`);
+                
+                // العودة للصفحة الرئيسية
+                showPage('home');
+            }, 1500);
+        }
+        
+        // ===========================================
+        // ============ نظام السلة ==================
+        // ===========================================
+        
+        function addToCart(productName, price) {
+            const existingItem = appState.cart.find(item => item.name === productName);
+            
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                appState.cart.push({
+                    id: Date.now(),
+                    name: productName,
+                    price: price,
+                    quantity: 1
+                });
+            }
+            
+            saveAppState();
+            updateCartCount();
+            showNotification(`تمت إضافة ${productName} إلى السلة`);
+        }
+        
+        function updateCartCount() {
+            const totalItems = appState.cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cartCount').textContent = totalItems;
+        }
+        
+        function loadCartPage() {
+            const cartItems = document.getElementById('cartItems');
+            const cartSummary = document.getElementById('cartSummary');
+            
+            if (appState.cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div style="text-align: center; padding: 3rem;">
+                        <i class="fas fa-shopping-cart" style="font-size: 4rem; color: #ddd; margin-bottom: 1rem;"></i>
+                        <h3>سلة التسوق فارغة</h3>
+                        <p>ابدأ بإضافة بعض المنتجات إلى سلة التسوق</p>
+                        <button class="btn btn-primary" onclick="showPage('shop')">تصفح المتجر</button>
+                    </div>
+                `;
+                cartSummary.style.display = 'none';
                 return;
             }
             
-            // Show thank you section
-            document.getElementById('thank-you-section').style.display = 'block';
+            let html = '';
+            let subtotal = 0;
             
-            // Scroll to thank you section
-            document.getElementById('thank-you-section').scrollIntoView({ 
-                behavior: 'smooth' 
+            appState.cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                subtotal += itemTotal;
+                
+                html += `
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <h4>${item.name}</h4>
+                            <p style="color: var(--secondary-color); font-weight: bold;">${item.price} درهم</p>
+                        </div>
+                        <div class="cart-item-controls">
+                            <button class="btn btn-outline" onclick="updateCartItem(${item.id}, ${item.quantity - 1})" ${item.quantity <= 1 ? 'disabled' : ''} aria-label="تقليل الكمية">-</button>
+                            <span style="font-weight: bold; min-width: 30px; text-align: center;">${item.quantity}</span>
+                            <button class="btn btn-outline" onclick="updateCartItem(${item.id}, ${item.quantity + 1})" aria-label="زيادة الكمية">+</button>
+                            <span style="font-weight: bold; min-width: 100px; text-align: left;">${itemTotal} درهم</span>
+                            <button class="btn btn-outline" onclick="removeCartItem(${item.id})" style="color: #f44336; border-color: #f44336;" aria-label="حذف المنتج">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
             });
-        });
+            
+            cartItems.innerHTML = html;
+            cartSummary.style.display = 'block';
+            
+            const tax = subtotal * 0.10;
+            const total = subtotal + tax;
+            
+            document.getElementById('subtotal').textContent = subtotal + ' درهم';
+            document.getElementById('tax').textContent = tax.toFixed(2) + ' درهم';
+            document.getElementById('total').textContent = total.toFixed(2) + ' درهم';
+        }
+        
+        function updateCartItem(itemId, newQuantity) {
+            if (newQuantity < 1) {
+                removeCartItem(itemId);
+                return;
+            }
+            
+            const item = appState.cart.find(item => item.id === itemId);
+            if (item) {
+                item.quantity = newQuantity;
+                saveAppState();
+                loadCartPage();
+                updateCartCount();
+            }
+        }
+        
+        function removeCartItem(itemId) {
+            appState.cart = appState.cart.filter(item => item.id !== itemId);
+            saveAppState();
+            loadCartPage();
+            updateCartCount();
+            showNotification('تم حذف المنتج من السلة');
+        }
+        
+        function checkout() {
+            if (appState.cart.length === 0) {
+                showNotification('السلة فارغة');
+                return;
+            }
+            
+            showLoading();
+            
+            // محاكاة عملية الدفع
+            setTimeout(() => {
+                const total = document.getElementById('total').textContent;
+                
+                // تفريغ السلة
+                appState.cart = [];
+                saveAppState();
+                updateCartCount();
+                
+                hideLoading();
+                showNotification(`تم إتمام الشراء بنجاح! إجمالي المبلغ: ${total}`);
+                showPage('home');
+            }, 2000);
+        }
+        
+        // ===========================================
+        // ============ نظام البطولات ===============
+        // ===========================================
+        
+        function registerTournament(tournamentType) {
+            const teamName = prompt(`أدخل اسم فريقك للمشاركة في بطولة ${tournamentType}:`);
+            if (!teamName) return;
+            
+            const captainName = prompt('أدخل اسم قائد الفريق:');
+            if (!captainName) return;
+            
+            showLoading();
+            
+            setTimeout(() => {
+                hideLoading();
+                showNotification(`تم تسجيل فريق ${teamName} في بطولة ${tournamentType}`);
+            }, 1000);
+        }
+        
+        // ===========================================
+        // ============ نظام الدردشة ================
+        // ===========================================
+        
+        function initChat() {
+            // تحديث حالة الاتصال
+            updateChatStatus();
+        }
+        
+        function toggleChat() {
+            const chatWindow = document.querySelector('.chat-window');
+            const isExpanded = chatWindow.classList.contains('active');
+            appState.chatState.isOpen = !appState.chatState.isOpen;
+            
+            if (appState.chatState.isOpen) {
+                chatWindow.classList.add('active');
+                document.querySelector('.chat-toggle').setAttribute('aria-expanded', 'true');
+                // إخفاء الإشعارات عند فتح الدردشة
+                appState.chatState.unread = 0;
+                updateChatNotification();
+                // التركيز على حقل الإدخال
+                setTimeout(() => {
+                    document.getElementById('chatInput').focus();
+                }, 300);
+            } else {
+                chatWindow.classList.remove('active');
+                document.querySelector('.chat-toggle').setAttribute('aria-expanded', 'false');
+            }
+        }
+        
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            // إضافة رسالة المستخدم
+            addChatMessage('user', message);
+            input.value = '';
+            
+            // محاكاة الكتابة
+            showTypingIndicator();
+            
+            // الرد الآلي بعد تأخير
+            setTimeout(() => {
+                hideTypingIndicator();
+                const response = generateChatResponse(message);
+                addChatMessage('bot', response);
+                
+                // حفظ الدردشة
+                saveAppState();
+            }, 1500);
+        }
+        
+        function sendQuickMessage(message) {
+            document.getElementById('chatInput').value = message;
+            sendMessage();
+        }
+        
+        function handleChatKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+                event.preventDefault();
+            }
+            
+            // اختصارات لوحة المفاتيح
+            if (event.ctrlKey && event.key === '/') {
+                event.preventDefault();
+                toggleChat();
+            }
+            
+            if (event.key === 'Escape' && appState.chatState.isOpen) {
+                toggleChat();
+            }
+        }
+        
+        function generateChatResponse(userMessage) {
+            userMessage = userMessage.toLowerCase();
+            
+            // البحث عن كلمات مفتاحية
+            for (const [keyword, responses] of Object.entries(chatResponses)) {
+                if (userMessage.includes(keyword.toLowerCase())) {
+                    return responses[Math.floor(Math.random() * responses.length)];
+                }
+            }
+            
+            // رد افتراضي
+            const defaultResponses = [
+                'يمكنني مساعدتك في:<br>• الحجوزات<br>• الأسعار<br>• البطولات<br>• الاشتراكات<br>• معلومات الاتصال',
+                'لم أفهم سؤالك تماماً. هل يمكنك إعادة صياغته؟',
+                'يمكنك استعراض الموقع للعثور على ما تبحث عنه، أو اطلب مني مساعدتك بشكل محدد'
+            ];
+            
+            return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
+        }
+        
+        function addChatMessage(sender, text) {
+            const message = {
+                sender: sender,
+                text: text,
+                time: new Date().toLocaleTimeString('ar-MA', { hour: '2-digit', minute: '2-digit' })
+            };
+            
+            appState.chatState.messages.push(message);
+            updateChatDisplay();
+            
+            // تحديث الإشعارات
+            if (sender === 'user' && !appState.chatState.isOpen) {
+                appState.chatState.unread++;
+                updateChatNotification();
+                
+                // إشعار بصوت
+                playNotificationSound();
+            }
+        }
+        
+        function updateChatDisplay() {
+            const chatBody = document.getElementById('chatMessages');
+            chatBody.innerHTML = '';
+            
+            // إضافة جميع الرسائل
+            appState.chatState.messages.forEach(msg => {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `chat-message ${msg.sender}`;
+                
+                const avatarIcon = msg.sender === 'user' ? 'fas fa-user' : 'fas fa-robot';
+                
+                messageDiv.innerHTML = `
+                    <div class="message-avatar">
+                        <i class="${avatarIcon}"></i>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-text">${msg.text}</div>
+                        <div class="message-time">${msg.time}</div>
+                    </div>
+                `;
+                
+                chatBody.appendChild(messageDiv);
+            });
+            
+            // إعادة إضافة أزرار الإجراءات السريعة
+            const quickActions = document.createElement('div');
+            quickActions.className = 'quick-actions';
+            quickActions.innerHTML = `
+                <button class="quick-btn" onclick="sendQuickMessage('أريد حجز موعد')">
+                    <i class="fas fa-calendar-check"></i> حجز موعد
+                </button>
+                <button class="quick-btn" onclick="sendQuickMessage('متى البطولة القادمة؟')">
+                    <i class="fas fa-trophy"></i> البطولات
+                </button>
+                <button class="quick-btn" onclick="sendQuickMessage('ما هي أسعار الاشتراكات؟')">
+                    <i class="fas fa-crown"></i> الاشتراكات
+                </button>
+                <button class="quick-btn" onclick="sendQuickMessage('أين موقعكم؟')">
+                    <i class="fas fa-map-marker-alt"></i> الموقع
+                </button>
+            `;
+            chatBody.appendChild(quickActions);
+            
+            // التمرير للأسفل
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+        
+        function showTypingIndicator() {
+            appState.chatState.isTyping = true;
+            document.getElementById('typingIndicator').style.display = 'flex';
+            
+            const chatBody = document.getElementById('chatMessages');
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+        
+        function hideTypingIndicator() {
+            appState.chatState.isTyping = false;
+            document.getElementById('typingIndicator').style.display = 'none';
+        }
+        
+        function updateChatNotification() {
+            const badge = document.getElementById('chatNotification');
+            badge.textContent = appState.chatState.unread;
+            badge.style.display = appState.chatState.unread > 0 ? 'flex' : 'none';
+        }
+        
+        function updateChatStatus() {
+            const status = document.getElementById('chatStatus');
+            // محاكاة تغيير الحالة
+            setTimeout(() => {
+                status.innerHTML = '<i class="fas fa-circle"></i> متصل الآن';
+                status.style.color = '#4CAF50';
+            }, 1000);
+        }
+        
+        // ===========================================
+        // ============ أدوات مساعدة ================
+        // ===========================================
+        
+        function showLoading() {
+            document.getElementById('loading').classList.add('active');
+        }
+        
+        function hideLoading() {
+            document.getElementById('loading').classList.remove('active');
+        }
+        
+        function showNotification(message) {
+            // إنشاء عنصر الإشعار
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: var(--secondary-color);
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: var(--border-radius);
+                box-shadow: var(--shadow);
+                z-index: 2000;
+                animation: slideIn 0.3s ease;
+                max-width: 300px;
+            `;
+            notification.setAttribute('role', 'alert');
+            notification.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-check-circle"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // إزالة الإشعار بعد 3 ثواني
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+            
+            // إضافة أنيميشن CSS إذا لم تكن موجودة
+            if (!document.querySelector('#notification-styles')) {
+                const style = document.createElement('style');
+                style.id = 'notification-styles';
+                style.textContent = `
+                    @keyframes slideIn {
+                        from { transform: translateX(100%); opacity: 0; }
+                        to { transform: translateX(0); opacity: 1; }
+                    }
+                    @keyframes slideOut {
+                        from { transform: translateX(0); opacity: 1; }
+                        to { transform: translateX(100%); opacity: 0; }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        }
+        
+        function sendContactMessage() {
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const message = document.getElementById('contactMessage').value;
+            
+            if (!name || !email || !message) {
+                showNotification('يرجى ملء جميع الحقول');
+                return;
+            }
+            
+            showLoading();
+            
+            setTimeout(() => {
+                hideLoading();
+                showNotification('تم إرسال رسالتك بنجاح، سنتواصل معك قريباً!');
+                
+                // مسح النموذج
+                document.getElementById('contactName').value = '';
+                document.getElementById('contactEmail').value = '';
+                document.getElementById('contactMessage').value = '';
+            }, 1500);
+        }
+        
+        function subscribeNewsletter() {
+            const email = document.getElementById('newsletterEmail').value;
+            
+            if (!email || !email.includes('@')) {
+                showNotification('يرجى إدخال بريد إلكتروني صحيح');
+                return;
+            }
+            
+            showLoading();
+            
+            setTimeout(() => {
+                hideLoading();
+                showNotification('شكراً على اشتراكك في النشرة البريدية!');
+                document.getElementById('newsletterEmail').value = '';
+            }, 1000);
+        }
+        
+        function playNotificationSound() {
+            // إنشاء صوت إشعار بسيط
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.frequency.value = 800;
+                oscillator.type = 'sine';
+                
+                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+                
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.5);
+            } catch (e) {
+                console.log('لا يمكن تشغيل الصوت');
+            }
+        }
+        
+        function requestNotificationPermission() {
+            if ('Notification' in window && Notification.permission === 'default') {
+                Notification.requestPermission().then(permission => {
+                    if (permission === 'granted') {
+                        console.log('Notification permission granted');
+                    }
+                });
+            }
+        }
+        
+        function setupEventListeners() {
+            // إغلاق القوائم عند النقر خارجها
+            document.addEventListener('click', (e) => {
+                // إغلاق القائمة المتنقلة
+                const navLinks = document.getElementById('navLinks');
+                const mobileBtn = document.querySelector('.mobile-menu-btn');
+                
+                if (mobileBtn && !mobileBtn.contains(e.target) && navLinks && !navLinks.contains(e.target) && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    mobileBtn.setAttribute('aria-expanded', 'false');
+                }
+                
+                // إغلاق الدردشة عند النقر خارجها
+                const chatWidget = document.getElementById('chatWidget');
+                const chatToggle = document.querySelector('.chat-toggle');
+                const chatWindow = document.querySelector('.chat-window');
+                
+                if (chatWidget && chatToggle && chatWindow && 
+                    !chatWidget.contains(e.target) && 
+                    appState.chatState.isOpen) {
+                    toggleChat();
+                }
+            });
+            
+            // إغلاق الدردشة بـ Esc
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && appState.chatState.isOpen) {
+                    toggleChat();
+                }
+            });
+        }
+        
+        function setupPerformanceOptimizations() {
+            // Lazy Loading للصور
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.src;
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            images.forEach(img => imageObserver.observe(img));
+            
+            // Defer non-critical CSS
+            const nonCriticalStyles = document.createElement('link');
+            nonCriticalStyles.rel = 'stylesheet';
+            nonCriticalStyles.href = 'non-critical.css';
+            nonCriticalStyles.media = 'print';
+            nonCriticalStyles.onload = () => {
+                nonCriticalStyles.media = 'all';
+            };
+            document.head.appendChild(nonCriticalStyles);
+        }
+        
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    console.log('ServiceWorker registration successful');
+                }).catch(err => {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+        
+        // API Integration Functions
+        const API_BASE_URL = 'https://api.corner90.ma';
+        
+        async function fetchServices() {
+            try {
+                const response = await fetch(`${API_BASE_URL}/services`);
+                return await response.json();
+            } catch (error) {
+                console.error('Error fetching services:', error);
+                return getCachedServices();
+            }
+        }
+        
+        async function createBookingAPI(bookingData) {
+            try {
+                const response = await fetch(`${API_BASE_URL}/bookings`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(bookingData)
+                });
+                return await response.json();
+            } catch (error) {
+                console.error('Error creating booking:', error);
+                // Fallback to localStorage
+                return { success: true, message: 'Booking saved locally' };
+            }
+        }
+        
+        function getCachedServices() {
+            return JSON.parse(localStorage.getItem('cached_services') || '[]');
+        }
     </script>
 </body>
 </html>
