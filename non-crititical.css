@@ -1,0 +1,26 @@
+/* non-critical.css */
+/* الأنماط التي ليست ضرورية للتحميل الأولي */
+.print-only { display: none; }
+.no-print { display: block; }
+
+@media print {
+  .no-print { display: none; }
+  .print-only { display: block; }
+}
+
+/* تحسينات إضافية للطباعة */
+@media print {
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  
+  .btn, .chat-widget, .mobile-menu-btn {
+    display: none !important;
+  }
+  
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+}
